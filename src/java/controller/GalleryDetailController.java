@@ -1,11 +1,11 @@
 /**
- * Copyright (C) 2021, FPT University
- * J3.L.P0017
- * Photographer
- * 
- * Record of change:
- * DATE         Version             Author          DESCRIPTION
- * 2021-05-13   1.0                 NangNN          First Version
+ * Copyright (C) 2021, FPT University<br>
+ * J3.L.P0017<br>
+ * Photographer<br>
+ *
+ * Record of change:<br>
+ * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
+ * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
  */
 package controller;
 
@@ -19,9 +19,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modal.GalleryDAO;
-import modal.ImageGalleryDAO;
-import modal.ShareDAO;
+import dao.impl.GalleryDAOImpl;
+import dao.impl.ImageGalleryDAOImpl;
+import dao.impl.ShareDAOImpl;
 
 /**
  *
@@ -59,15 +59,15 @@ public class GalleryDetailController extends HttpServlet {
             } catch (NumberFormatException e) {
                 id = -1;
             }
-            GalleryDAO ga = new GalleryDAO();
+            GalleryDAOImpl ga = new GalleryDAOImpl();
 //            get Top 3 gallery for header
-            ArrayList<Gallery> top3gallery = ga.getTop3Gallerys();
+            ArrayList<Gallery> top3gallery = ga.getTop3Galleries();
             request.setAttribute("Top3Gallery", top3gallery);         
 //            big image
             request.setAttribute("galleryCurrent", ga.getGalleryByID(id));
             request.setAttribute("id", id);
 //            get image gallery to paging
-            ImageGalleryDAO imgDAO = new ImageGalleryDAO();
+            ImageGalleryDAOImpl imgDAO = new ImageGalleryDAOImpl();
             ArrayList<ImageGallery> imgGalleryList = imgDAO.getImageGalleryPaging(id, pageSize, page);
             request.setAttribute("imgGalleryList", imgGalleryList);
             if (imgGalleryList.size() != 0) {              
@@ -78,7 +78,7 @@ public class GalleryDetailController extends HttpServlet {
             }
 
 //            get link share
-            ShareDAO share = new ShareDAO();
+            ShareDAOImpl share = new ShareDAOImpl();
             ArrayList<Share> shareList = share.getShare();
             request.setAttribute("ShareList", shareList);
 

@@ -1,14 +1,17 @@
 /**
- * Copyright (C) 2021, FPT University
- * J3.L.P0017
- * Photographer
- * 
- * Record of change:
- * DATE         Version             Author          DESCRIPTION
- * 2021-05-13   1.0                 NangNN          First Version
+ * Copyright (C) 2021, FPT University<br>
+ * J3.L.P0017<br>
+ * Photographer<br>
+ *
+ * Record of change:<br>
+ * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
+ * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
  */
 package controller;
 
+import dao.IGalleryDAO;
+import dao.IInfomationDAO;
+import dao.IShareDAO;
 import entity.Gallery;
 import entity.Share;
 import java.io.IOException;
@@ -18,9 +21,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modal.GalleryDAO;
-import modal.InformationDAO;
-import modal.ShareDAO;
+import dao.impl.GalleryDAOImpl;
+import dao.impl.InformationDAOImpl;
+import dao.impl.ShareDAOImpl;
 
 /**
  *
@@ -41,21 +44,21 @@ public class ContactController extends HttpServlet {
             throws ServletException, IOException {
         try {
             // get Top 3 gallery for header
-            GalleryDAO ga = new GalleryDAO();
-            ArrayList<Gallery> top3gallery = ga.getTop3Gallerys();
+            IGalleryDAO ga = new GalleryDAOImpl();
+            ArrayList<Gallery> top3gallery = ga.getTop3Galleries();
             request.setAttribute("Top3Gallery", top3gallery);
-            
+
             // get information
-            InformationDAO inforDAO = new InformationDAO();
-            request.setAttribute("information",inforDAO.getInfor());
-            
+            IInfomationDAO inforDAO = new InformationDAOImpl();
+            request.setAttribute("information", inforDAO.getInfor());
+
             // get link share
-            ShareDAO share = new ShareDAO();
+            IShareDAO share = new ShareDAOImpl();
             ArrayList<Share> shareList = share.getShare();
             request.setAttribute("ShareList", shareList);
-            
+
             request.setAttribute("boldContact", "font-bold");
-            
+
             request.getRequestDispatcher("contact.jsp").forward(request, response);
         } catch (Exception e) {
             request.getRequestDispatcher("error.jsp").forward(request, response);

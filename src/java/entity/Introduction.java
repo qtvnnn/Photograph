@@ -1,8 +1,11 @@
 /**
- * Copyright (C) 2021, FPT University J3.L.P0017 Photographer
+ * Copyright (C) 2021, FPT University<br>
+ * J3.L.P0017<br>
+ * Photographer<br>
  *
- * Record of change: DATE Version Author DESCRIPTION 2021-05-13 1.0 NangNN First
- * Version
+ * Record of change:<br>
+ * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
+ * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
  */
 package entity;
 

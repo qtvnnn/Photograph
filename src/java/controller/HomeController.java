@@ -1,11 +1,11 @@
 /**
- * Copyright (C) 2021, FPT University
- * J3.L.P0017
- * Photographer
- * 
- * Record of change:
- * DATE         Version             Author          DESCRIPTION
- * 2021-05-13   1.0                 NangNN          First Version
+ * Copyright (C) 2021, FPT University<br>
+ * J3.L.P0017<br>
+ * Photographer<br>
+ *
+ * Record of change:<br>
+ * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
+ * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
  */
 package controller;
 
@@ -18,9 +18,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modal.GalleryDAO;
-import modal.IntroductionDAO;
-import modal.ShareDAO;
+import dao.impl.GalleryDAOImpl;
+import dao.impl.IntroductionDAOImpl;
+import dao.impl.ShareDAOImpl;
 
 /**
  *
@@ -52,19 +52,19 @@ public class HomeController extends HttpServlet {
                 page = 1;
             }
             
-            GalleryDAO ga = new GalleryDAO();
+            GalleryDAOImpl ga = new GalleryDAOImpl();
             
             // get Top 3 gallery for header
-            ArrayList<Gallery> top3gallery = ga.getTop3Gallerys();
+            ArrayList<Gallery> top3gallery = ga.getTop3Galleries();
             request.setAttribute("Top3Gallery", top3gallery);
 
             // get introduction in home page
-            IntroductionDAO introDAO = new IntroductionDAO();
+            IntroductionDAOImpl introDAO = new IntroductionDAOImpl();
             Introduction intro = introDAO.getIntroduction();
             request.setAttribute("Introduction", intro);
 
             // paging get gallery in page with 3 galleries
-            ArrayList<Gallery> gaList = ga.getGallerys(pageSize, page);
+            ArrayList<Gallery> gaList = ga.getGalleries(pageSize, page);
             request.setAttribute("PagingGallery", gaList);
             if (gaList.size() != 0) {
             // get number page
@@ -74,7 +74,7 @@ public class HomeController extends HttpServlet {
             }
             
             // get link share
-            ShareDAO share = new ShareDAO();
+            ShareDAOImpl share = new ShareDAOImpl();
             ArrayList<Share> shareList = share.getShare();
             request.setAttribute("ShareList", shareList);
 
