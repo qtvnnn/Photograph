@@ -49,8 +49,9 @@ public class InformationDAOImpl extends DBContext implements IInfomationDAO {
                 String tel = rs.getString("tel");
                 String email = rs.getString("email");
                 String image = getImagePath() + rs.getString("image");
-                Information in = new Information(address, city, country, tel, email, image);
-                return in;
+                
+                Information information = new Information(address, city, country, tel, email, image);
+                return information;
             }
 
         } catch (Exception ex) {

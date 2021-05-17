@@ -9,6 +9,9 @@
  */
 package controller;
 
+import dao.IGalleryDAO;
+import dao.IImageGalleryDAO;
+import dao.IShareDAO;
 import entity.Gallery;
 import entity.ImageGallery;
 import entity.Share;
@@ -24,8 +27,16 @@ import dao.impl.ImageGalleryDAOImpl;
 import dao.impl.ShareDAOImpl;
 
 /**
+ * Process:<br>
+ * - Get Top 3 galleries for header<br>
+ * - Get image gallery to paging<br>
+ * - Get big image<br>
+ * - Get link share
  *
- * @author User
+ * Exception:<br>
+ * - If output failed, it will return to error page.
+ *
+ * @author nangnnhe130538
  */
 public class GalleryDetailController extends HttpServlet {
 
@@ -33,8 +44,10 @@ public class GalleryDetailController extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request servlet request
-     * @param response servlet response
+     * @param request. It is a object of
+     * <code>javax.servlet.http.HttpServletRequest</code>
+     * @param response It is a object of
+     * <code>javax.servlet.http.HttpServletResponse</code>
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
@@ -42,7 +55,7 @@ public class GalleryDetailController extends HttpServlet {
             throws ServletException, IOException {
         try {
             int pageSize = 8;
-//            get page current
+            // get page current
             int page = 0;
             try {
                 page = Integer.parseInt(request.getParameter("page"));
@@ -52,37 +65,38 @@ public class GalleryDetailController extends HttpServlet {
             if (page <= 0) {
                 page = 1;
             }
-//            Get the ID of the gallery  wants to see in detail
+            // Get the ID of the gallery  wants to see in detail
             int id = 0;
             try {
                 id = Integer.parseInt(request.getParameter("id"));
             } catch (NumberFormatException e) {
                 id = -1;
             }
-            GalleryDAOImpl ga = new GalleryDAOImpl();
-//            get Top 3 gallery for header
-            ArrayList<Gallery> top3gallery = ga.getTop3Galleries();
-            request.setAttribute("Top3Gallery", top3gallery);         
-//            big image
-            request.setAttribute("galleryCurrent", ga.getGalleryByID(id));
+            IGalleryDAO galleryDAO = new GalleryDAOImpl();
+            
+            // get Top 3 gallery for header
+            ArrayList<Gallery> top3Galleries = galleryDAO.getTop3Galleries();
+            request.setAttribute("Top3Gallery", top3Galleries);
+
+            // big image
+            request.setAttribute("galleryCurrent", galleryDAO.getGalleryByID(id));
             request.setAttribute("id", id);
-//            get image gallery to paging
-            ImageGalleryDAOImpl imgDAO = new ImageGalleryDAOImpl();
-            ArrayList<ImageGallery> imgGalleryList = imgDAO.getImageGalleryPaging(id, pageSize, page);
-            request.setAttribute("imgGalleryList", imgGalleryList);
-            if (imgGalleryList.size() != 0) {              
-//            get number page
-                int numberPage = imgDAO.getNumberPages(id, pageSize);
+            
+            // get image gallery to paging
+            IImageGalleryDAO imageGalleryDAO = new ImageGalleryDAOImpl();
+            ArrayList<ImageGallery> imageGalleries = imageGalleryDAO.getImageGalleryPaging(id, pageSize, page);
+            request.setAttribute("imgGalleryList", imageGalleries);
+            if (imageGalleries.size() != 0) {
+                // get number page
+                int numberPage = imageGalleryDAO.getNumberPages(id, pageSize);
                 request.setAttribute("numberPage", numberPage);
                 request.setAttribute("page", page);
             }
 
-//            get link share
-            ShareDAOImpl share = new ShareDAOImpl();
-            ArrayList<Share> shareList = share.getShare();
+            // get link share
+            IShareDAO shareDAO = new ShareDAOImpl();
+            ArrayList<Share> shareList = shareDAO.getShare();
             request.setAttribute("ShareList", shareList);
-
-            
 
             request.getRequestDispatcher("galleryDetail.jsp").forward(request, response);
         } catch (Exception e) {

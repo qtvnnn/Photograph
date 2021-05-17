@@ -19,5 +19,11 @@ import entity.Introduction;
  */
 public interface IIntroductionDAO {
 
+    /**
+     * Get all Introduction options according in the database.
+     *
+     * @returna list <code>Introduction</code> object
+     * @throws Exception
+     */
     public Introduction getIntroduction() throws Exception;
 }

@@ -39,7 +39,7 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
         ResultSet rs = null;
 
         String sql = "Select top 3 * from Gallery";
-        ArrayList<Gallery> list = new ArrayList<>();
+        ArrayList<Gallery> galleries = new ArrayList<>();
         try {
             conn = getConnection();
             statement = conn.prepareStatement(sql);
@@ -47,12 +47,12 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String des = rs.getString("description");
+                String description = rs.getString("description");
                 String image = getImagePath() + rs.getString("image");
-                Gallery ga = new Gallery(id, name, des, image);
-                list.add(ga);
+                Gallery gallery = new Gallery(id, name, description, image);
+                galleries.add(gallery);
             }
-            return list;
+            return galleries;
         } catch (Exception ex) {
             throw ex;
         } finally {
@@ -79,10 +79,11 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
                 + "                SELECT ROW_NUMBER()\n"
                 + "                OVER(ORDER BY id) as Number,* FROM Gallery\n"
                 + "                )as dbNumber where Number between ? and ?";
-        ArrayList<Gallery> list = new ArrayList<>();
+        ArrayList<Gallery> galleries = new ArrayList<>();
         try {
             int from = pageSize * (pageIndex - 1) + 1;
             int to = pageSize * pageIndex;
+            
             conn = getConnection();
             statement = conn.prepareStatement(sql);
             statement.setInt(1, from);
@@ -91,12 +92,12 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String des = rs.getString("description");
+                String description = rs.getString("description");
                 String image = getImagePath() + rs.getString("image");
-                Gallery ga = new Gallery(id, name, des, image);
-                list.add(ga);
+                Gallery gallery = new Gallery(id, name, description, image);
+                galleries.add(gallery);
             }
-            return list;
+            return galleries;
         } catch (Exception ex) {
             throw ex;
         } finally {
@@ -161,12 +162,12 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
             statement.setInt(1, id);
             rs = statement.executeQuery();
             while (rs.next()) {
-                int id1 = rs.getInt("id");
+                int galleryId = rs.getInt("id");
                 String name = rs.getString("name");
                 String des = rs.getString("description");
                 String image = getImagePath() + rs.getString("image");
-                Gallery ga = new Gallery(id1, name, des, image);
-                return ga;
+                Gallery gallery = new Gallery(galleryId, name, des, image);
+                return gallery;
             }
 
         } catch (Exception ex) {

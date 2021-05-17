@@ -46,10 +46,12 @@ public class ImageGalleryDAOImpl extends DBContext implements IImageGalleryDAO {
                 + "                SELECT ROW_NUMBER()\n"
                 + "                OVER(ORDER BY id) as Number,* FROM ImageGallery WHERE gallery_id=? \n"
                 + "                )as dbNumber where Number between ? and ?";
-        ArrayList<ImageGallery> list = new ArrayList<>();
+        
+        ArrayList<ImageGallery> imageGalleries = new ArrayList<>();
         try {
             int from = pageSize * (pageIndex - 1) + 1;
             int to = pageSize * pageIndex;
+            
             conn = getConnection();
             statement = conn.prepareStatement(sql);
             statement.setInt(1, id);
@@ -58,11 +60,11 @@ public class ImageGalleryDAOImpl extends DBContext implements IImageGalleryDAO {
             rs = statement.executeQuery();
             while (rs.next()) {
                 String img = getImagePath() + rs.getString("image");
-                int gaID = rs.getInt("gallery_id");
-                ImageGallery im = new ImageGallery(img, gaID);
-                list.add(im);
+                int imageGalleryId = rs.getInt("gallery_id");
+                ImageGallery imageGallery = new ImageGallery(img, imageGalleryId);
+                imageGalleries.add(imageGallery);
             }
-            return list;
+            return imageGalleries;
         } catch (Exception ex) {
             throw ex;
         } finally {

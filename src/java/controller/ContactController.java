@@ -26,8 +26,15 @@ import dao.impl.InformationDAOImpl;
 import dao.impl.ShareDAOImpl;
 
 /**
+ * Process:<br>
+ * - Get Top 3 galleries for header<br>
+ * - Get information<br>
+ * - Get link share<br>
  *
- * @author User
+ * Exception:<br>
+ * - If output failed, it will return to error page.
+ *
+ * @author nangnnhe130538
  */
 public class ContactController extends HttpServlet {
 
@@ -35,8 +42,10 @@ public class ContactController extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request servlet request
-     * @param response servlet response
+     * @param request. It is a object of
+     * <code>javax.servlet.http.HttpServletRequest</code>
+     * @param response It is a object of
+     * <code>javax.servlet.http.HttpServletResponse</code>
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
@@ -44,21 +53,20 @@ public class ContactController extends HttpServlet {
             throws ServletException, IOException {
         try {
             // get Top 3 gallery for header
-            IGalleryDAO ga = new GalleryDAOImpl();
-            ArrayList<Gallery> top3gallery = ga.getTop3Galleries();
-            request.setAttribute("Top3Gallery", top3gallery);
+            IGalleryDAO galleryDAO = new GalleryDAOImpl();
+            ArrayList<Gallery> top3Galleries = galleryDAO.getTop3Galleries();
+            request.setAttribute("Top3Gallery", top3Galleries);
 
             // get information
-            IInfomationDAO inforDAO = new InformationDAOImpl();
-            request.setAttribute("information", inforDAO.getInfor());
+            IInfomationDAO infomationDAO = new InformationDAOImpl();
+            request.setAttribute("information", infomationDAO.getInfor());
 
             // get link share
-            IShareDAO share = new ShareDAOImpl();
-            ArrayList<Share> shareList = share.getShare();
+            IShareDAO shareDAO = new ShareDAOImpl();
+            ArrayList<Share> shareList = shareDAO.getShare();
             request.setAttribute("ShareList", shareList);
 
             request.setAttribute("boldContact", "font-bold");
-
             request.getRequestDispatcher("contact.jsp").forward(request, response);
         } catch (Exception e) {
             request.getRequestDispatcher("error.jsp").forward(request, response);

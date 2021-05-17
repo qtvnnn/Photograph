@@ -9,6 +9,9 @@
  */
 package controller;
 
+import dao.IGalleryDAO;
+import dao.IIntroductionDAO;
+import dao.IShareDAO;
 import entity.Gallery;
 import entity.Introduction;
 import entity.Share;
@@ -23,8 +26,16 @@ import dao.impl.IntroductionDAOImpl;
 import dao.impl.ShareDAOImpl;
 
 /**
+ * Process:<br>
+ * - Get Top 3 galleries for header<br>
+ * - GEt introduction in home page<br>
+ * - Get paging gallery in page with 3 galleries<br>
+ * - Get link share<br>
  *
- * @author User
+ * Exception:<br>
+ * - If output failed, it will return to error page.
+ *
+ * @author nangnnhe130538
  */
 public class HomeController extends HttpServlet {
 
@@ -32,8 +43,10 @@ public class HomeController extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request servlet request
-     * @param response servlet response
+     * @param request. It is a object of
+     * <code>javax.servlet.http.HttpServletRequest</code>
+     * @param response It is a object of
+     * <code>javax.servlet.http.HttpServletResponse</code>
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
@@ -51,37 +64,35 @@ public class HomeController extends HttpServlet {
             if (page <= 0) {
                 page = 1;
             }
-            
-            GalleryDAOImpl ga = new GalleryDAOImpl();
-            
+
+            IGalleryDAO galleryDAO = new GalleryDAOImpl();
+
             // get Top 3 gallery for header
-            ArrayList<Gallery> top3gallery = ga.getTop3Galleries();
-            request.setAttribute("Top3Gallery", top3gallery);
+            ArrayList<Gallery> top3Gallery = galleryDAO.getTop3Galleries();
+            request.setAttribute("Top3Gallery", top3Gallery);
 
             // get introduction in home page
-            IntroductionDAOImpl introDAO = new IntroductionDAOImpl();
-            Introduction intro = introDAO.getIntroduction();
+            IIntroductionDAO introductionDAO = new IntroductionDAOImpl();
+            Introduction intro = introductionDAO.getIntroduction();
             request.setAttribute("Introduction", intro);
 
             // paging get gallery in page with 3 galleries
-            ArrayList<Gallery> gaList = ga.getGalleries(pageSize, page);
-            request.setAttribute("PagingGallery", gaList);
-            if (gaList.size() != 0) {
-            // get number page
-                int numberPage = ga.getNumberPages(pageSize);
+            ArrayList<Gallery> galleries = galleryDAO.getGalleries(pageSize, page);
+            request.setAttribute("PagingGallery", galleries);
+            if (galleries.size() != 0) {
+                // get number page
+                int numberPage = galleryDAO.getNumberPages(pageSize);
                 request.setAttribute("numberPage", numberPage);
                 request.setAttribute("page", page);
             }
-            
+
             // get link share
-            ShareDAOImpl share = new ShareDAOImpl();
-            ArrayList<Share> shareList = share.getShare();
+            IShareDAO shareDAO = new ShareDAOImpl();
+            ArrayList<Share> shareList = shareDAO.getShare();
+
             request.setAttribute("ShareList", shareList);
-
             request.setAttribute("boldHome", "font-bold");
-
             request.getRequestDispatcher("index.jsp").forward(request, response);
-
         } catch (Exception e) {
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }

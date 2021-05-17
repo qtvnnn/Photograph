@@ -38,17 +38,18 @@ public class ShareDAOImpl extends DBContext implements IShareDAO {
         ResultSet rs = null;
 
         String sql = "select * from Share";
-        ArrayList<Share> list = new ArrayList<>();
+        ArrayList<Share> shares = new ArrayList<>();
         try {
             conn = getConnection();
             statement = conn.prepareStatement(sql);
             rs = statement.executeQuery();
+
             while (rs.next()) {
-                Share sh = new Share(getImagePath() + rs.getString("icon"),
+                Share share = new Share(getImagePath() + rs.getString("icon"),
                         rs.getString("social_network"), rs.getString("url"));
-                list.add(sh);
+                shares.add(share);
             }
-            return list;
+            return shares;
 
         } catch (Exception ex) {
             throw ex;

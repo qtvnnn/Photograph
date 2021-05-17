@@ -22,13 +22,13 @@ public class Introduction {
      */
     private String image;
     /**
-     * Introduction descript
+     * Introduction description
      */
-    private String descript;
+    private String description;
     /**
-     * Introduction aboutme
+     * Introduction aboutMe
      */
-    private String aboutme;
+    private String aboutMe;
 
     /**
      * Constructor.<br>
@@ -45,8 +45,8 @@ public class Introduction {
      */
     public Introduction(String image, String descript, String aboutme) {
         this.image = image;
-        this.descript = descript;
-        this.aboutme = aboutme;
+        this.description = descript;
+        this.aboutMe = aboutme;
     }
 
     /**
@@ -68,39 +68,39 @@ public class Introduction {
     }
 
     /**
-     * Get descript. <br>
+     * Get description. <br>
      *
-     * @return descript. It is a <code>java.lang.String</code>
+     * @return description. It is a <code>java.lang.String</code>
      */
-    public String getDescript() {
-        return descript;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * Set descript
+     * Set description
      *
-     * @param descript
+     * @param description
      */
-    public void setDescript(String descript) {
-        this.descript = descript;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
-     * Get aboutme. <br>
+     * Get aboutMe. <br>
      *
-     * @return aboutme. It is a <code>java.lang.String</code>
+     * @return aboutMe. It is a <code>java.lang.String</code>
      */
-    public String getAboutme() {
-        return aboutme;
+    public String getAboutMe() {
+        return aboutMe;
     }
 
     /**
-     * Set aboutme
+     * Set aboutMe
      *
-     * @param aboutme
+     * @param aboutMe
      */
-    public void setAboutme(String aboutme) {
-        this.aboutme = aboutme;
+    public void setAboutMe(String aboutMe) {
+        this.aboutMe = aboutMe;
     }
 
 }

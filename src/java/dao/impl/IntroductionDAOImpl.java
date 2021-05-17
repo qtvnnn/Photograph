@@ -44,10 +44,10 @@ public class IntroductionDAOImpl extends DBContext implements IIntroductionDAO {
             rs = statement.executeQuery();
             if (rs.next()) {
                 String image = getImagePath() + rs.getString("image");
-                String des = rs.getString("descript");
-                String about = rs.getString("aboutme");
-                Introduction in = new Introduction(image, des, about);
-                return in;
+                String description = rs.getString("descript");
+                String aboutMe = rs.getString("aboutme");
+                Introduction introduction = new Introduction(image, description, aboutMe);
+                return introduction;
             }
 
         } catch (Exception ex) {
