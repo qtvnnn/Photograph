@@ -1,11 +1,11 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
- * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package dao;
 
@@ -23,9 +23,9 @@ public interface IImageGalleryDAO {
     /**
      * Get all ImageGallery options according in the database and paging
      *
-     * @param id. It is an int number.
-     * @param pageSize. It is an int number.
-     * @param pageIndex. It is an int number.
+     * @param id it is an int number.
+     * @param pageSize it is an int number.
+     * @param pageIndex it is an int number.
      * @return a list <code>ImageGallery</code> object
      * @throws Exception
      */
@@ -34,8 +34,8 @@ public interface IImageGalleryDAO {
     /**
      * Get number of ImageGallery options according in the database
      *
-     * @param id. It is an int number.
-     * @param pageSize. It is an int number.
+     * @param id it is an int number.
+     * @param pageSize it is an int number.
      * @return an int number.
      * @throws Exception
      */

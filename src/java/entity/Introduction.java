@@ -1,11 +1,11 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
- * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package entity;
 
@@ -39,9 +39,9 @@ public class Introduction {
     /**
      * Constructor.<br>
      *
-     * @param image. It is a <code>java.lang.String</code>
-     * @param descript. It is a <code>java.lang.String</code>
-     * @param aboutme. It is a <code>java.lang.String</code>
+     * @param image it is a <code>java.lang.String</code>
+     * @param descript it is a <code>java.lang.String</code>
+     * @param aboutme it is a <code>java.lang.String</code>
      */
     public Introduction(String image, String descript, String aboutme) {
         this.image = image;
@@ -50,54 +50,54 @@ public class Introduction {
     }
 
     /**
-     * Get image. <br>
+     * Get value of image attribute of Introduction class. <br>
      *
-     * @return image. It is a <code>java.lang.String</code>
+     * @return image it is a <code>java.lang.String</code>
      */
     public String getImage() {
         return image;
     }
 
     /**
-     * Set image
+     * Set value of image attribute of Introduction class
      *
-     * @param image
+     * @param image it is a <code>java.lang.String</code>
      */
     public void setImage(String image) {
         this.image = image;
     }
 
     /**
-     * Get description. <br>
+     * Get value of description attribute of Introduction class. <br>
      *
-     * @return description. It is a <code>java.lang.String</code>
+     * @return description it is a <code>java.lang.String</code>
      */
     public String getDescription() {
         return description;
     }
 
     /**
-     * Set description
+     * Set value of description attribute of Introduction class
      *
-     * @param description
+     * @param description it is a <code>java.lang.String</code>
      */
     public void setDescription(String description) {
         this.description = description;
     }
 
     /**
-     * Get aboutMe. <br>
+     * Get value of aboutMe attribute of Introduction class. <br>
      *
-     * @return aboutMe. It is a <code>java.lang.String</code>
+     * @return aboutMe it is a <code>java.lang.String</code>
      */
     public String getAboutMe() {
         return aboutMe;
     }
 
     /**
-     * Set aboutMe
+     * Set value of aboutMe attribute of Introduction class
      *
-     * @param aboutMe
+     * @param aboutMe it is a <code>java.lang.String</code>
      */
     public void setAboutMe(String aboutMe) {
         this.aboutMe = aboutMe;

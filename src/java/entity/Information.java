@@ -1,11 +1,11 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
- * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package entity;
 
@@ -51,12 +51,12 @@ public class Information {
     /**
      * Constructor.<br>
      *
-     * @param address. It is a <code>java.lang.String</code>
-     * @param city. It is a <code>java.lang.String</code>
-     * @param country. It is a <code>java.lang.String</code>
-     * @param tel. It is a <code>java.lang.String</code>
-     * @param email. It is a <code>java.lang.String</code>
-     * @param image . It is a <code>java.lang.String</code>
+     * @param address it is a <code>java.lang.String</code>
+     * @param city it is a <code>java.lang.String</code>
+     * @param country it is a <code>java.lang.String</code>
+     * @param tel it is a <code>java.lang.String</code>
+     * @param email it is a <code>java.lang.String</code>
+     * @param image it is a <code>java.lang.String</code>
      */
     public Information(String address, String city, String country, String tel, String email, String image) {
         this.address = address;
@@ -68,108 +68,108 @@ public class Information {
     }
 
     /**
-     * Get address. <br>
+     * Get value of address attribute of Information class. <br>
      *
-     * @return address. It is a <code>java.lang.String</code>
+     * @return address it is a <code>java.lang.String</code>
      */
     public String getAddress() {
         return address;
     }
 
     /**
-     * Set address
+     * Set value of address attribute of Information class
      *
-     * @param address
+     * @param address it is a <code>java.lang.String</code>
      */
     public void setAddress(String address) {
         this.address = address;
     }
 
     /**
-     * Get city. <br>
+     * Get value of city attribute of Information class. <br>
      *
-     * @return city. It is a <code>java.lang.String</code>
+     * @return city it is a <code>java.lang.String</code>
      */
     public String getCity() {
         return city;
     }
 
     /**
-     * Set city
+     * Set value of city attribute of Information class
      *
-     * @param city
+     * @param city it is a <code>java.lang.String</code>
      */
     public void setCity(String city) {
         this.city = city;
     }
 
     /**
-     * Get country. <br>
+     * Get value of country attribute of Information class. <br>
      *
-     * @return country. It is a <code>java.lang.String</code>
+     * @return country it is a <code>java.lang.String</code>
      */
     public String getCountry() {
         return country;
     }
 
     /**
-     * Set country
+     * Set value of country attribute of Information class
      *
-     * @param country
+     * @param country it is a <code>java.lang.String</code>
      */
     public void setCountry(String country) {
         this.country = country;
     }
 
     /**
-     * Get tel. <br>
+     * Get value of tel attribute of Information class. <br>
      *
-     * @return tel. It is a <code>java.lang.String</code>
+     * @return tel it is a <code>java.lang.String</code>
      */
     public String getTel() {
         return tel;
     }
 
     /**
-     * Set tel
+     * Set value of tel attribute of Information class
      *
-     * @param tel
+     * @param tel it is a <code>java.lang.String</code>
      */
     public void setTel(String tel) {
         this.tel = tel;
     }
 
     /**
-     * Get email. <br>
+     * Get value of email attribute of Information class. <br>
      *
-     * @return email. It is a <code>java.lang.String</code>
+     * @return email it is a <code>java.lang.String</code>
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * Set email
+     * Set value of email attribute of Information class
      *
-     * @param email
+     * @param email it is a <code>java.lang.String</code>
      */
     public void setEmail(String email) {
         this.email = email;
     }
 
     /**
-     * Get image. <br>
+     * Get value of image attribute of Information class. <br>
      *
-     * @return image. It is a <code>java.lang.String</code>
+     * @return image it is a <code>java.lang.String</code>
      */
     public String getImage() {
         return image;
     }
 
     /**
-     * Set image
+     * Set value of image attribute of Information class
      *
-     * @param image
+     * @param image it is a <code>java.lang.String</code>
      */
     public void setImage(String image) {
         this.image = image;

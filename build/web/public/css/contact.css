@@ -18,6 +18,7 @@ and open the template in the editor.
     width: 60%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
 }
 .main-body-content-left, .main-body-content-right {
     margin-top: 10px;
@@ -45,8 +46,8 @@ and open the template in the editor.
 .main-body-content-left div:nth-child(5),
 .main-body-content-left div:nth-child(6),
 .main-body-content-left div:nth-child(7){
-     font-size: 12px;
-     font-family: sans-serif;
+    font-size: 12px;
+    font-family: sans-serif;
 }
 
 .main-body-content-left div:nth-child(6){

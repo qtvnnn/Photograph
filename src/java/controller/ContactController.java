@@ -1,11 +1,11 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
- * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package controller;
 
@@ -15,7 +15,6 @@ import dao.IShareDAO;
 import entity.Gallery;
 import entity.Share;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,6 +23,8 @@ import javax.servlet.http.HttpServletResponse;
 import dao.impl.GalleryDAOImpl;
 import dao.impl.InformationDAOImpl;
 import dao.impl.ShareDAOImpl;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Process:<br>
@@ -69,6 +70,8 @@ public class ContactController extends HttpServlet {
             request.setAttribute("boldContact", "font-bold");
             request.getRequestDispatcher("contact.jsp").forward(request, response);
         } catch (Exception e) {
+            Logger.getLogger(ContactController.class.getName()).log(Level.SEVERE, null, e);
+            request.setAttribute("errorMessage", e.toString());
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }

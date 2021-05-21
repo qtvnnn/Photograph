@@ -1,11 +1,11 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
- * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package controller;
 
@@ -24,6 +24,8 @@ import javax.servlet.http.HttpServletResponse;
 import dao.impl.GalleryDAOImpl;
 import dao.impl.IntroductionDAOImpl;
 import dao.impl.ShareDAOImpl;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Process:<br>
@@ -94,6 +96,8 @@ public class HomeController extends HttpServlet {
             request.setAttribute("boldHome", "font-bold");
             request.getRequestDispatcher("index.jsp").forward(request, response);
         } catch (Exception e) {
+            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, e);
+            request.setAttribute("errorMessage", e.toString());
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }

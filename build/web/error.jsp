@@ -12,6 +12,6 @@
         <title>Error</title>
     </head>
     <body>
-        <h1>Error!!!</h1>
+        <h1>${errorMessage}</h1>
     </body>
 </html>

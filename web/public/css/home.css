@@ -15,9 +15,10 @@ and open the template in the editor.
 
 .main-body-content {
     min-height: 80vh;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
 }
 .main-body-content-left, .main-body-content-right {
     margin-top: 10px;

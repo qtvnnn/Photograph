@@ -1,11 +1,11 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
- * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package entity;
 
@@ -39,9 +39,9 @@ public class Share {
     /**
      * Constructor.<br>
      *
-     * @param icon. It is a <code>java.lang.String</code>
-     * @param socialNetwork. It is a <code>java.lang.String</code>
-     * @param url. It is a <code>java.lang.String</code>
+     * @param icon it is a <code>java.lang.String</code>
+     * @param socialNetwork it is a <code>java.lang.String</code>
+     * @param url it is a <code>java.lang.String</code>
      */
     public Share(String icon, String socialNetwork, String url) {
         this.icon = icon;
@@ -50,54 +50,54 @@ public class Share {
     }
 
     /**
-     * Get icon. <br>
+     * Get value of icon attribute of Share class. <br>
      *
-     * @return icon. It is a <code>java.lang.String</code>
+     * @return icon it is a <code>java.lang.String</code>
      */
     public String getIcon() {
         return icon;
     }
 
     /**
-     * Set icon
+     * Set value of icon attribute of Share class
      *
-     * @param icon
+     * @param icon it is a <code>java.lang.String</code>
      */
     public void setIcon(String icon) {
         this.icon = icon;
     }
 
     /**
-     * Get socialNetwork. <br>
+     * Get value of socialNetwork attribute of Share class. <br>
      *
-     * @return socialNetwork. It is a <code>java.lang.String</code>
+     * @return socialNetwork it is a <code>java.lang.String</code>
      */
     public String getSocialNetwork() {
         return socialNetwork;
     }
 
     /**
-     * Set socialNetwork
+     * Set value of socialNetwork attribute of Share class
      *
-     * @param socialNetwork
+     * @param socialNetwork it is a <code>java.lang.String</code>
      */
     public void setSocialNetwork(String socialNetwork) {
         this.socialNetwork = socialNetwork;
     }
 
     /**
-     * Get url. <br>
+     * Get value of url attribute of Share class. <br>
      *
-     * @return url. It is a <code>java.lang.String</code>
+     * @return url it is a <code>java.lang.String</code>
      */
     public String getUrl() {
         return url;
     }
 
     /**
-     * Set url
+     * Set value of url attribute of Share class
      *
-     * @param url
+     * @param url it is a <code>java.lang.String</code>
      */
     public void setUrl(String url) {
         this.url = url;

@@ -1,11 +1,11 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
- * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package dao.impl;
 
@@ -65,8 +65,8 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
     /**
      * Get all Galleries options according in the database and paging
      *
-     * @param pageSize. It is an int number.
-     * @param pageIndex. It is an int number.
+     * @param pageSize it is an int number.
+     * @param pageIndex it is an int number.
      * @return a list <code>Gallery</code> object
      * @throws Exception
      */
@@ -110,7 +110,7 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
     /**
      * Get number of Galleries options according in the database
      *
-     * @param pageSize. It is an int number.
+     * @param pageSize it is an int number.
      * @return an int number.
      * @throws Exception
      */
@@ -146,7 +146,7 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
     /**
      * Get a Gallery option according in the database by Gallery id
      *
-     * @param id. It is an int number.
+     * @param id it is an int number.
      * @return a <code>Gallery</code> object
      * @throws Exception
      */

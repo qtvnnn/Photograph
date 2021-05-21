@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <description>HttpSessionListener</description>
+        <listener-class>sessionListenner.SessionListener</listener-class>
+    </listener>
     <servlet>
         <servlet-name>Contact</servlet-name>
         <servlet-class>controller.ContactController</servlet-class>
@@ -33,5 +37,30 @@
         <env-entry-name>imagePath</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
         <env-entry-value>public/images/</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>serverName</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>localhost</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>port</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>1433</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>dbName</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>p0017</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>username</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>sa</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>password</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>123</env-entry-value>
     </env-entry>
 </web-app>

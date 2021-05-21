@@ -21,7 +21,7 @@
                     <!--intro image, description-->
                     <div class="intro">
                         <div class="intro-image"><img src="${Introduction.image}"/></div>
-                        <div class="intro-descript">${Introduction.descript}</div>
+                        <div class="intro-descript">${Introduction.description}</div>
                     </div>
                     <!--link view gallery-->
                     <div class="view-gallery">
@@ -59,7 +59,7 @@
                     <div class="about-me">
                         <div class="about-me-title">About me</div>
                         <p class="about-me-content">
-                            ${Introduction.aboutme}
+                            ${Introduction.aboutMe}
                         </p>
                     </div>
                         

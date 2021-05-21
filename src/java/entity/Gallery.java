@@ -1,10 +1,10 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
+ * DATE  Version ----------- Author -------- DESCRIPTION<br>
  * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
  */
 package entity;
@@ -43,10 +43,10 @@ public class Gallery {
     /**
      * Constructor
      *
-     * @param id. It is an int
-     * @param name. It is a <code>java.lang.String</code>
-     * @param description. It is a <code>java.lang.String</code>
-     * @param image. It is a <code>java.lang.String</code>
+     * @param id it is an int
+     * @param name it is a <code>java.lang.String</code>
+     * @param description it is a <code>java.lang.String</code>
+     * @param image it is a <code>java.lang.String</code>
      */
     public Gallery(int id, String name, String description, String image) {
         this.id = id;
@@ -56,72 +56,72 @@ public class Gallery {
     }
 
     /**
-     * Get id. <br>
+     * Get value of id attribute of Gallery class. <br>
      *
-     * @return id. It is an int
+     * @return id it is an int
      */
     public int getId() {
         return id;
     }
 
     /**
-     * Set id
+     * Set value of id attribute of Gallery class
      *
-     * @param id
+     * @param id it is an int
      */
     public void setId(int id) {
         this.id = id;
     }
 
     /**
-     * Get name. <br>
+     * Get value of name attribute of Gallery class. <br>
      *
-     * @return name. It is a <code>java.lang.String</code>
+     * @return name it is a <code>java.lang.String</code>
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Set name
+     * Set value of name attribute of Gallery class
      *
-     * @param name
+     * @param name it is a <code>java.lang.String</code>
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Get description. <br>
+     * Get value of description attribute of Gallery class. <br>
      *
-     * @return description. It is a <code>java.lang.String</code>
+     * @return description it is a <code>java.lang.String</code>
      */
     public String getDescription() {
         return description;
     }
 
     /**
-     * Set description
+     * Set value of description attribute of Gallery class
      *
-     * @param description
+     * @param description it is a <code>java.lang.String</code>
      */
     public void setDescription(String description) {
         this.description = description;
     }
 
     /**
-     * Get image. <br>
+     * Get value of image attribute of Gallery class. <br>
      *
-     * @return image. It is a <code>java.lang.String</code>
+     * @return image it is a <code>java.lang.String</code>
      */
     public String getImage() {
         return image;
     }
 
     /**
-     * Set image
+     * Set value of image attribute of Gallery class
      *
-     * @param image
+     * @param image it is a <code>java.lang.String</code>
      */
     public void setImage(String image) {
         this.image = image;

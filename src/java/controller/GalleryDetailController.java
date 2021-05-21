@@ -1,11 +1,11 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
- * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package controller;
 
@@ -16,7 +16,6 @@ import entity.Gallery;
 import entity.ImageGallery;
 import entity.Share;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,6 +24,8 @@ import javax.servlet.http.HttpServletResponse;
 import dao.impl.GalleryDAOImpl;
 import dao.impl.ImageGalleryDAOImpl;
 import dao.impl.ShareDAOImpl;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Process:<br>
@@ -73,7 +74,7 @@ public class GalleryDetailController extends HttpServlet {
                 id = -1;
             }
             IGalleryDAO galleryDAO = new GalleryDAOImpl();
-            
+
             // get Top 3 gallery for header
             ArrayList<Gallery> top3Galleries = galleryDAO.getTop3Galleries();
             request.setAttribute("Top3Gallery", top3Galleries);
@@ -81,7 +82,7 @@ public class GalleryDetailController extends HttpServlet {
             // big image
             request.setAttribute("galleryCurrent", galleryDAO.getGalleryByID(id));
             request.setAttribute("id", id);
-            
+
             // get image gallery to paging
             IImageGalleryDAO imageGalleryDAO = new ImageGalleryDAOImpl();
             ArrayList<ImageGallery> imageGalleries = imageGalleryDAO.getImageGalleryPaging(id, pageSize, page);
@@ -100,6 +101,8 @@ public class GalleryDetailController extends HttpServlet {
 
             request.getRequestDispatcher("galleryDetail.jsp").forward(request, response);
         } catch (Exception e) {
+            Logger.getLogger(GalleryDetailController.class.getName()).log(Level.SEVERE, null, e);
+            request.setAttribute("errorMessage", e.toString());
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }

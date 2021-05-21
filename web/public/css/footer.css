@@ -19,6 +19,7 @@ and open the template in the editor.
 .footer-content {
     width: 60%;
     margin: 0 auto;
+    display: flex;
 }
 
 .footer-content p {
@@ -29,4 +30,9 @@ and open the template in the editor.
 .footer-content p a {
     color:#f0edef;
     text-decoration: underline;
+}
+
+.footer-content .button{
+    margin-left: 70%;
+    margin-top: 10px;
 }

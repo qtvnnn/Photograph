@@ -1,11 +1,11 @@
-/**
+/*
  * Copyright (C) 2021, FPT University<br>
  * J3.L.P0017<br>
  * Photographer<br>
  *
  * Record of change:<br>
- * DATE ------- Version ----------- Author -------- DESCRIPTION<br>
- * 2021-05-13 - 1.0 --------------- NangNN -------- First Version<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package entity;
 
@@ -35,8 +35,8 @@ public class ImageGallery {
     /**
      * Constructor
      *
-     * @param image. It is a <code>java.lang.String</code>
-     * @param galleryId. It is an int
+     * @param image it is a <code>java.lang.String</code>
+     * @param galleryId it is an int
      */
     public ImageGallery(String image, int galleryId) {
         this.image = image;
@@ -44,25 +44,25 @@ public class ImageGallery {
     }
 
     /**
-     * Get image. <br>
+     * Get value of image attribute of ImageGallery class. <br>
      *
-     * @return image. It is a <code>java.lang.String</code>
+     * @return image it is a <code>java.lang.String</code>
      */
     public String getImage() {
         return image;
     }
 
     /**
-     * Set image
+     * Set value of image attribute of ImageGallery class
      *
-     * @param image
+     * @param image it is a <code>java.lang.String</code>
      */
     public void setImage(String image) {
         this.image = image;
     }
 
     /**
-     * Get getGalleryId. <br>
+     * Get value of getGalleryId attribute of ImageGallery class. <br>
      *
      * @return getGalleryId. It is an int
      */
@@ -71,9 +71,9 @@ public class ImageGallery {
     }
 
     /**
-     * Set galleryId
+     * Set value of galleryId attribute of ImageGallery class
      *
-     * @param galleryId
+     * @param galleryId it is an int
      */
     public void setGalleryId(int galleryId) {
         this.galleryId = galleryId;
