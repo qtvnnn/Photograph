@@ -33,16 +33,18 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
      * @return a list <code>Gallery</code> object
      * @throws Exception
      */
-    public ArrayList<Gallery> getTop3Galleries() throws Exception {
+    @Override
+    public ArrayList<Gallery> getTopGalleries(int top) throws Exception {
         Connection conn = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
 
-        String sql = "Select top 3 * from Gallery";
+        String sql = "Select top (?) * from Gallery";
         ArrayList<Gallery> galleries = new ArrayList<>();
         try {
             conn = getConnection();
             statement = conn.prepareStatement(sql);
+            statement.setInt(1, top);
             rs = statement.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
@@ -70,6 +72,7 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
      * @return a list <code>Gallery</code> object
      * @throws Exception
      */
+    @Override
     public ArrayList<Gallery> getGalleries(int pageSize, int pageIndex) throws Exception {
         Connection conn = null;
         PreparedStatement statement = null;
@@ -83,7 +86,7 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
         try {
             int from = pageSize * (pageIndex - 1) + 1;
             int to = pageSize * pageIndex;
-            
+
             conn = getConnection();
             statement = conn.prepareStatement(sql);
             statement.setInt(1, from);

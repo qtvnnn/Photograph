@@ -28,6 +28,9 @@ import javax.naming.NamingException;
  */
 public class DBContext {
 
+    /**
+     * DBContext initial
+     */
     private InitialContext initial;
     /**
      * DBContext context
@@ -94,7 +97,7 @@ public class DBContext {
      * When you are done with using your connection, you need close in order to
      * release any other database resource
      *
-     * @param ps PreparedStatement
+     * @param ps it is a object of <code>java.sql.PreparedStatement</code>
      * @throws Exception
      */
     public void closePreparedStatement(PreparedStatement ps) throws Exception {
@@ -107,7 +110,7 @@ public class DBContext {
      * When you are done with using your connection, you need close in order to
      * release any other database resource
      *
-     * @param con Connection
+     * @param con it is a object of <code>java.sql.Connection</code>
      * @throws Exception
      */
     public void closeConnection(Connection con) throws Exception {
@@ -120,7 +123,7 @@ public class DBContext {
      * When you are done with using your connection, you need close in order to
      * release any other database resource
      *
-     * @param rs ResultSet
+     * @param rs it is a object of <code>java.sql.ResultSet</code>
      * @throws Exception
      */
     public void closeResultSet(ResultSet rs) throws Exception {

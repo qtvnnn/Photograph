@@ -43,9 +43,9 @@ public class ContactController extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request. It is a object of
+     * @param request it is a object of
      * <code>javax.servlet.http.HttpServletRequest</code>
-     * @param response It is a object of
+     * @param response it is a object of
      * <code>javax.servlet.http.HttpServletResponse</code>
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
@@ -55,7 +55,7 @@ public class ContactController extends HttpServlet {
         try {
             // get Top 3 gallery for header
             IGalleryDAO galleryDAO = new GalleryDAOImpl();
-            ArrayList<Gallery> top3Galleries = galleryDAO.getTop3Galleries();
+            ArrayList<Gallery> top3Galleries = galleryDAO.getTopGalleries(3);
             request.setAttribute("Top3Gallery", top3Galleries);
 
             // get information

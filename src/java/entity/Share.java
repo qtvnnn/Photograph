@@ -50,7 +50,7 @@ public class Share {
     }
 
     /**
-     * Get value of icon attribute of Share class. <br>
+     * Get value from icon attribute of Share class. <br>
      *
      * @return icon it is a <code>java.lang.String</code>
      */
@@ -59,7 +59,7 @@ public class Share {
     }
 
     /**
-     * Set value of icon attribute of Share class
+     * Set value to icon attribute of Share class
      *
      * @param icon it is a <code>java.lang.String</code>
      */
@@ -68,7 +68,7 @@ public class Share {
     }
 
     /**
-     * Get value of socialNetwork attribute of Share class. <br>
+     * Get value from socialNetwork attribute of Share class. <br>
      *
      * @return socialNetwork it is a <code>java.lang.String</code>
      */
@@ -77,7 +77,7 @@ public class Share {
     }
 
     /**
-     * Set value of socialNetwork attribute of Share class
+     * Set value to socialNetwork attribute of Share class
      *
      * @param socialNetwork it is a <code>java.lang.String</code>
      */
@@ -86,7 +86,7 @@ public class Share {
     }
 
     /**
-     * Get value of url attribute of Share class. <br>
+     * Get value from url attribute of Share class. <br>
      *
      * @return url it is a <code>java.lang.String</code>
      */
@@ -95,7 +95,7 @@ public class Share {
     }
 
     /**
-     * Set value of url attribute of Share class
+     * Set value to url attribute of Share class
      *
      * @param url it is a <code>java.lang.String</code>
      */

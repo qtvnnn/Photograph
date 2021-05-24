@@ -45,9 +45,9 @@ public class HomeController extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request. It is a object of
+     * @param request it is a object of
      * <code>javax.servlet.http.HttpServletRequest</code>
-     * @param response It is a object of
+     * @param response it is a object of
      * <code>javax.servlet.http.HttpServletResponse</code>
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
@@ -70,7 +70,7 @@ public class HomeController extends HttpServlet {
             IGalleryDAO galleryDAO = new GalleryDAOImpl();
 
             // get Top 3 gallery for header
-            ArrayList<Gallery> top3Gallery = galleryDAO.getTop3Galleries();
+            ArrayList<Gallery> top3Gallery = galleryDAO.getTopGalleries(3);
             request.setAttribute("Top3Gallery", top3Gallery);
 
             // get introduction in home page
@@ -81,7 +81,7 @@ public class HomeController extends HttpServlet {
             // paging get gallery in page with 3 galleries
             ArrayList<Gallery> galleries = galleryDAO.getGalleries(pageSize, page);
             request.setAttribute("PagingGallery", galleries);
-            if (galleries.size() != 0) {
+            if (!galleries.isEmpty()) {
                 // get number page
                 int numberPage = galleryDAO.getNumberPages(pageSize);
                 request.setAttribute("numberPage", numberPage);

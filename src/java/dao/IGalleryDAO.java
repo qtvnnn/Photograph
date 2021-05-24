@@ -23,10 +23,11 @@ public interface IGalleryDAO {
     /**
      * Get top 3 Galleries options according in the database
      *
+     * @param top it is an int
      * @return a list <code>Gallery</code> object
      * @throws Exception
      */
-    public ArrayList<Gallery> getTop3Galleries() throws Exception;
+    public ArrayList<Gallery> getTopGalleries(int top) throws Exception;
 
     /**
      * Get all Galleries options according in the database and paging

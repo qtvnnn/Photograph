@@ -30,6 +30,6 @@ public interface INumberOfViewsDao {
      *
      * @throws java.lang.Exception
      */
-    public void UpdateNumber1() throws Exception;
+    public void updateNumber() throws Exception;
 
 }

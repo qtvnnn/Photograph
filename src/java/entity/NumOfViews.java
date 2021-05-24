@@ -39,7 +39,7 @@ public class NumOfViews {
     }
 
     /**
-     * Get value of numberOfviews attribute of Share class. <br>
+     * Get value from numberOfviews attribute of Share class. <br>
      *
      * @return numberOfviews it is a <code>java.lang.String</code>
      */
@@ -48,7 +48,7 @@ public class NumOfViews {
     }
 
     /**
-     * Set value of numberOfviews attribute of Share class
+     * Set value to numberOfviews attribute of Share class
      *
      * @param numberOfviews it is a <code>java.lang.String</code>
      */

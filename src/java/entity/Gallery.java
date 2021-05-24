@@ -56,7 +56,7 @@ public class Gallery {
     }
 
     /**
-     * Get value of id attribute of Gallery class. <br>
+     * Get value form id attribute of Gallery class. <br>
      *
      * @return id it is an int
      */
@@ -65,7 +65,7 @@ public class Gallery {
     }
 
     /**
-     * Set value of id attribute of Gallery class
+     * Set value to id attribute of Gallery class
      *
      * @param id it is an int
      */
@@ -74,7 +74,7 @@ public class Gallery {
     }
 
     /**
-     * Get value of name attribute of Gallery class. <br>
+     * Get value from name attribute of Gallery class. <br>
      *
      * @return name it is a <code>java.lang.String</code>
      */
@@ -83,7 +83,7 @@ public class Gallery {
     }
 
     /**
-     * Set value of name attribute of Gallery class
+     * Set value to name attribute of Gallery class
      *
      * @param name it is a <code>java.lang.String</code>
      */
@@ -92,7 +92,7 @@ public class Gallery {
     }
 
     /**
-     * Get value of description attribute of Gallery class. <br>
+     * Get value from description attribute of Gallery class. <br>
      *
      * @return description it is a <code>java.lang.String</code>
      */
@@ -101,7 +101,7 @@ public class Gallery {
     }
 
     /**
-     * Set value of description attribute of Gallery class
+     * Set value to description attribute of Gallery class
      *
      * @param description it is a <code>java.lang.String</code>
      */
@@ -110,7 +110,7 @@ public class Gallery {
     }
 
     /**
-     * Get value of image attribute of Gallery class. <br>
+     * Get value from image attribute of Gallery class. <br>
      *
      * @return image it is a <code>java.lang.String</code>
      */
@@ -119,7 +119,7 @@ public class Gallery {
     }
 
     /**
-     * Set value of image attribute of Gallery class
+     * Set value to image attribute of Gallery class
      *
      * @param image it is a <code>java.lang.String</code>
      */

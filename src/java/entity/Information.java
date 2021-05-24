@@ -68,7 +68,7 @@ public class Information {
     }
 
     /**
-     * Get value of address attribute of Information class. <br>
+     * Get value from address attribute of Information class. <br>
      *
      * @return address it is a <code>java.lang.String</code>
      */
@@ -77,7 +77,7 @@ public class Information {
     }
 
     /**
-     * Set value of address attribute of Information class
+     * Set value to address attribute of Information class
      *
      * @param address it is a <code>java.lang.String</code>
      */
@@ -86,7 +86,7 @@ public class Information {
     }
 
     /**
-     * Get value of city attribute of Information class. <br>
+     * Get value from city attribute of Information class. <br>
      *
      * @return city it is a <code>java.lang.String</code>
      */
@@ -95,7 +95,7 @@ public class Information {
     }
 
     /**
-     * Set value of city attribute of Information class
+     * Set value to city attribute of Information class
      *
      * @param city it is a <code>java.lang.String</code>
      */
@@ -104,7 +104,7 @@ public class Information {
     }
 
     /**
-     * Get value of country attribute of Information class. <br>
+     * Get value from country attribute of Information class. <br>
      *
      * @return country it is a <code>java.lang.String</code>
      */
@@ -113,7 +113,7 @@ public class Information {
     }
 
     /**
-     * Set value of country attribute of Information class
+     * Set value to country attribute of Information class
      *
      * @param country it is a <code>java.lang.String</code>
      */
@@ -122,7 +122,7 @@ public class Information {
     }
 
     /**
-     * Get value of tel attribute of Information class. <br>
+     * Get value from tel attribute of Information class. <br>
      *
      * @return tel it is a <code>java.lang.String</code>
      */
@@ -131,7 +131,7 @@ public class Information {
     }
 
     /**
-     * Set value of tel attribute of Information class
+     * Set value to tel attribute of Information class
      *
      * @param tel it is a <code>java.lang.String</code>
      */
@@ -140,7 +140,7 @@ public class Information {
     }
 
     /**
-     * Get value of email attribute of Information class. <br>
+     * Get value from email attribute of Information class. <br>
      *
      * @return email it is a <code>java.lang.String</code>
      */
@@ -149,7 +149,7 @@ public class Information {
     }
 
     /**
-     * Set value of email attribute of Information class
+     * Set value to email attribute of Information class
      *
      * @param email it is a <code>java.lang.String</code>
      */
@@ -158,7 +158,7 @@ public class Information {
     }
 
     /**
-     * Get value of image attribute of Information class. <br>
+     * Get value from image attribute of Information class. <br>
      *
      * @return image it is a <code>java.lang.String</code>
      */
@@ -167,7 +167,7 @@ public class Information {
     }
 
     /**
-     * Set value of image attribute of Information class
+     * Set value to image attribute of Information class
      *
      * @param image it is a <code>java.lang.String</code>
      */

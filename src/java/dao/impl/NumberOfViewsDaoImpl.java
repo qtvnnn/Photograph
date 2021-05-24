@@ -37,7 +37,7 @@ public class NumberOfViewsDaoImpl extends DBContext implements INumberOfViewsDao
         PreparedStatement statement = null;
         ResultSet rs = null;
 
-        String sql = "select * from NumberOfViews ";
+        String sql = "select * from NumberOfViews";
         try {
             conn = new DBContext().getConnection();
             statement = conn.prepareStatement(sql);
@@ -61,7 +61,7 @@ public class NumberOfViewsDaoImpl extends DBContext implements INumberOfViewsDao
      * @throws java.lang.Exception
      */
     @Override
-    public void UpdateNumber1() throws Exception {
+    public void updateNumber() throws Exception {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;

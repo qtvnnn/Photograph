@@ -36,6 +36,7 @@ public class ImageGalleryDAOImpl extends DBContext implements IImageGalleryDAO{
      * @return a list <code>ImageGallery</code> object
      * @throws Exception
      */
+    @Override
     public ArrayList<ImageGallery> getImageGalleryPaging(int id, int pageSize, int pageIndex) throws Exception {
         Connection conn = null;
         PreparedStatement statement = null;
@@ -81,6 +82,7 @@ public class ImageGalleryDAOImpl extends DBContext implements IImageGalleryDAO{
      * @return an int number.
      * @throws Exception
      */
+    @Override
     public int getNumberPages(int id, int pageSize) throws Exception {
         Connection conn = null;
         PreparedStatement statement = null;

@@ -45,9 +45,9 @@ public class GalleryDetailController extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request. It is a object of
+     * @param request it is a object of
      * <code>javax.servlet.http.HttpServletRequest</code>
-     * @param response It is a object of
+     * @param response it is a object of
      * <code>javax.servlet.http.HttpServletResponse</code>
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
@@ -72,11 +72,13 @@ public class GalleryDetailController extends HttpServlet {
                 id = Integer.parseInt(request.getParameter("id"));
             } catch (NumberFormatException e) {
                 id = -1;
+                request.setAttribute("errorMessage", e.toString());
+                request.getRequestDispatcher("error.jsp").forward(request, response);
             }
             IGalleryDAO galleryDAO = new GalleryDAOImpl();
 
             // get Top 3 gallery for header
-            ArrayList<Gallery> top3Galleries = galleryDAO.getTop3Galleries();
+            ArrayList<Gallery> top3Galleries = galleryDAO.getTopGalleries(3);
             request.setAttribute("Top3Gallery", top3Galleries);
 
             // big image
@@ -87,7 +89,7 @@ public class GalleryDetailController extends HttpServlet {
             IImageGalleryDAO imageGalleryDAO = new ImageGalleryDAOImpl();
             ArrayList<ImageGallery> imageGalleries = imageGalleryDAO.getImageGalleryPaging(id, pageSize, page);
             request.setAttribute("imgGalleryList", imageGalleries);
-            if (imageGalleries.size() != 0) {
+            if (!imageGalleries.isEmpty()) {
                 // get number page
                 int numberPage = imageGalleryDAO.getNumberPages(id, pageSize);
                 request.setAttribute("numberPage", numberPage);

@@ -32,6 +32,7 @@ public class IntroductionDAOImpl extends DBContext implements IIntroductionDAO {
      * @returna list <code>Introduction</code> object
      * @throws Exception
      */
+    @Override
     public Introduction getIntroduction() throws Exception {
         Connection conn = null;
         PreparedStatement statement = null;

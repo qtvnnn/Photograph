@@ -50,7 +50,7 @@ public class Introduction {
     }
 
     /**
-     * Get value of image attribute of Introduction class. <br>
+     * Get value from image attribute of Introduction class. <br>
      *
      * @return image it is a <code>java.lang.String</code>
      */
@@ -59,7 +59,7 @@ public class Introduction {
     }
 
     /**
-     * Set value of image attribute of Introduction class
+     * Set value to image attribute of Introduction class
      *
      * @param image it is a <code>java.lang.String</code>
      */
@@ -68,7 +68,7 @@ public class Introduction {
     }
 
     /**
-     * Get value of description attribute of Introduction class. <br>
+     * Get value from description attribute of Introduction class. <br>
      *
      * @return description it is a <code>java.lang.String</code>
      */
@@ -77,7 +77,7 @@ public class Introduction {
     }
 
     /**
-     * Set value of description attribute of Introduction class
+     * Set value to description attribute of Introduction class
      *
      * @param description it is a <code>java.lang.String</code>
      */
@@ -86,7 +86,7 @@ public class Introduction {
     }
 
     /**
-     * Get value of aboutMe attribute of Introduction class. <br>
+     * Get value from aboutMe attribute of Introduction class. <br>
      *
      * @return aboutMe it is a <code>java.lang.String</code>
      */
@@ -95,7 +95,7 @@ public class Introduction {
     }
 
     /**
-     * Set value of aboutMe attribute of Introduction class
+     * Set value to aboutMe attribute of Introduction class
      *
      * @param aboutMe it is a <code>java.lang.String</code>
      */

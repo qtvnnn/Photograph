@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSessionListener;
  *
  * @author Nangnnhe130538
  */
-public class SessionListener implements HttpSessionListener {
+public class ViewCountListener implements HttpSessionListener {
 
     /**
      *Update and Get count number of view page from table NumberOfViews in database when begin access to web site
@@ -30,13 +30,13 @@ public class SessionListener implements HttpSessionListener {
      */
     @Override
     public void sessionCreated(HttpSessionEvent se) {
-        INumberOfViewsDao NumDao = new NumberOfViewsDaoImpl();
+        INumberOfViewsDao numberOfViewsDao = new NumberOfViewsDaoImpl();
         try {
-            NumDao.UpdateNumber1();
-            String s = String.format("%06d", NumDao.getNumber());
+            numberOfViewsDao.updateNumber();
+            String s = String.format("%06d", numberOfViewsDao.getNumber());
             se.getSession().setAttribute("s", s);
         } catch (Exception e) {
-            Logger.getLogger(SessionListener.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(ViewCountListener.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 

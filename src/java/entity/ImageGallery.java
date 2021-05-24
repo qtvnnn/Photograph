@@ -44,7 +44,7 @@ public class ImageGallery {
     }
 
     /**
-     * Get value of image attribute of ImageGallery class. <br>
+     * Get value from image attribute of ImageGallery class. <br>
      *
      * @return image it is a <code>java.lang.String</code>
      */
@@ -53,7 +53,7 @@ public class ImageGallery {
     }
 
     /**
-     * Set value of image attribute of ImageGallery class
+     * Set value to image attribute of ImageGallery class
      *
      * @param image it is a <code>java.lang.String</code>
      */
@@ -62,7 +62,7 @@ public class ImageGallery {
     }
 
     /**
-     * Get value of getGalleryId attribute of ImageGallery class. <br>
+     * Get value from getGalleryId attribute of ImageGallery class. <br>
      *
      * @return getGalleryId. It is an int
      */
@@ -71,7 +71,7 @@ public class ImageGallery {
     }
 
     /**
-     * Set value of galleryId attribute of ImageGallery class
+     * Set value to galleryId attribute of ImageGallery class
      *
      * @param galleryId it is an int
      */
