@@ -54,6 +54,10 @@ public class HomeController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+//        HttpSession session = request.getSession();
+//        session.setMaxInactiveInterval(10 * 60);
+        
         try {
             int pageSize = 3;
             // get page current

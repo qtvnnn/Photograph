@@ -4,28 +4,33 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/Gallery.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/IntroductionDAOImpl.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/NumberOfViewsDaoImpl.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/ImageGalleryDAOImpl.java</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/IShareDAO.java</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/NumOfViews.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/sessionListenner/ViewCountListener.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/ImageGallery.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/web/META-INF/context.xml</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/GalleryDAOImpl.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/Information.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/Share.java</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/web/footer.jsp</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/controller/GalleryDetailController.java</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/controller/HomeController.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/InformationDAOImpl.java</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/controller/ContactController.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/Introduction.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/ShareDAOImpl.java</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/IInfomationDAO.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/db/DBContext.java</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/web/error.jsp</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/web/index.jsp</file>
             <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/INumberOfViewsDao.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/IGalleryDAO.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/IntroductionDAOImpl.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/NumberOfViewsDaoImpl.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/sessionListenner/ViewCountListener.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/ImageGallery.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/Information.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/Share.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/IIntroductionDAO.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/controller/GalleryDetailController.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/InformationDAOImpl.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/IImageGalleryDAO.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/entity/Introduction.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/dao/impl/ShareDAOImpl.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Photographer/Photograph/src/java/db/DBContext.java</file>
         </group>
     </open-files>
 </project-private>
