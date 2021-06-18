@@ -18,9 +18,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 /**
- * This class implements from class interface IImageGalleryDAO. <br>
- * This class contains method to query select data from the table
- * ImageGallery.<br>
+ * This class implements functions of the <code>IImageGalleryDAO</code> interface. <br>
+ * This class contains method to query select data from the table <code>ImageGallery</code>.<br>
  * There are get all ImageGallery and paging, get number ImageGallery.
  *
  * @author nangnnhe130538
@@ -28,11 +27,11 @@ import java.util.ArrayList;
 public class ImageGalleryDAOImpl extends DBContext implements IImageGalleryDAO{
 
     /**
-     * Get all ImageGallery options according in the database and paging
+     * Get all <code>ImageGallery</code> options according in the database and paging
      *
-     * @param id it is an int number.
-     * @param pageSize it is an int number.
-     * @param pageIndex it is an int number.
+     * @param id it is an <code>int</code>.
+     * @param pageSize it is an <code>int</code>.
+     * @param pageIndex it is an <code>int</code>.
      * @return a list <code>ImageGallery</code> object
      * @throws Exception
      */
@@ -75,11 +74,11 @@ public class ImageGalleryDAOImpl extends DBContext implements IImageGalleryDAO{
     }
 
     /**
-     * Get number of ImageGallery options according in the database
+     * Get number of <code>ImageGallery</code> options according in the database
      *
-     * @param id. It is an int number.
-     * @param pageSize. It is an int number.
-     * @return an int number.
+     * @param id it is an <code>int</code>.
+     * @param pageSize it is an <code>int</code>.
+     * @return an <code>int</code>.
      * @throws Exception
      */
     @Override

@@ -17,7 +17,7 @@
             <div class="pre-header-content">
                 <ul>
                     <li><a class="${boldHome}" href="Home">My front page</a></li>
-                    <c:forEach var="x" items="${Top3Gallery}">
+                    <c:forEach var="x" items="${top3Gallery}">
                         <c:if test="${x.id==id}">
                         <li><a class="font-bold" href="GalleryDetail?id=${x.id}">${x.name}</a></li>
                         </c:if>

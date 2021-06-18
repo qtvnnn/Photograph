@@ -10,15 +10,15 @@
 package dao;
 
 /**
- * This class contains methods to help us manipulate NumberOfViews objects in the
- * database.
+ * The interface of <code>NumberOfViewsDAOImpl</code> class defines methods to help us 
+ * manipulate <code>NumberOfViews</code> object from <code>NumberOfViews</code> tables in database.
  *
  * @author nangnnhe130538
  */
 public interface INumberOfViewsDao {
 
     /**
-     * Get number of view from NumberOfViews table in database
+     * Get number of view from <code>NumberOfViews</code> table in database
      *
      * @return number of view 
      * @throws java.lang.Exception

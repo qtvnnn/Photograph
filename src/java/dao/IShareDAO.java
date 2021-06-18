@@ -13,15 +13,15 @@ import entity.Share;
 import java.util.ArrayList;
 
 /**
- * This class contains methods to help us manipulate Share objects in the
- * database.
+ * The interface of <code>ShareDAOImpl</code> class defines methods to help us 
+ * manipulate <code>Share</code> object from <code>Share</code> tables in database.
  *
  * @author nangnnhe130538
  */
 public interface IShareDAO {
 
     /**
-     * Get all Share options according in the database.
+     * Get all <code>Share</code> options according in the database.
      *
      * @return a list <code>Share</code> object
      * @throws Exception

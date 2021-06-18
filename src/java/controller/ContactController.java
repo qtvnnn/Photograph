@@ -28,10 +28,12 @@ import java.util.logging.Logger;
 
 /**
  * Process:<br>
+ * This class used functions in <code>IGalleryDAO</code>, <code>IImageGalleryDAO</code>, <code>IShareDAO</code> to:
  * - Get Top 3 galleries for header<br>
  * - Get information<br>
- * - Get link share<br>
- *
+ * - Get link share for right bar<br>
+ * then forward to <code>contact.jsp</code>
+ * 
  * Exception:<br>
  * - If output failed, it will return to error page.
  *
@@ -42,7 +44,9 @@ public class ContactController extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
-     *
+     * Get Top 3 galleries for header, get information, get link share for right
+     * bar then forward to the page <code>contact.jsp</code>
+     * 
      * @param request it is a object of
      * <code>javax.servlet.http.HttpServletRequest</code>
      * @param response it is a object of
@@ -56,7 +60,7 @@ public class ContactController extends HttpServlet {
             // get Top 3 gallery for header
             IGalleryDAO galleryDAO = new GalleryDAOImpl();
             ArrayList<Gallery> top3Galleries = galleryDAO.getTopGalleries(3);
-            request.setAttribute("Top3Gallery", top3Galleries);
+            request.setAttribute("top3Gallery", top3Galleries);
 
             // get information
             IInfomationDAO infomationDAO = new InformationDAOImpl();
@@ -65,7 +69,7 @@ public class ContactController extends HttpServlet {
             // get link share
             IShareDAO shareDAO = new ShareDAOImpl();
             ArrayList<Share> shareList = shareDAO.getShare();
-            request.setAttribute("ShareList", shareList);
+            request.setAttribute("shareList", shareList);
 
             request.setAttribute("boldContact", "font-bold");
             request.getRequestDispatcher("contact.jsp").forward(request, response);
@@ -78,7 +82,8 @@ public class ContactController extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
-     * Handles the HTTP <code>GET</code> method.
+     * Handles the HTTP <code>POST</code> method.
+     * Call <code>processRequest</code> method
      *
      * @param request servlet request
      * @param response servlet response
@@ -93,6 +98,7 @@ public class ContactController extends HttpServlet {
 
     /**
      * Handles the HTTP <code>POST</code> method.
+     * Call <code>processRequest</code> method
      *
      * @param request servlet request
      * @param response servlet response

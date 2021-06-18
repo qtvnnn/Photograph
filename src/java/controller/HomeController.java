@@ -29,11 +29,13 @@ import java.util.logging.Logger;
 
 /**
  * Process:<br>
+ * This class used functions in <code>IGalleryDAO</code>, <code>IIntroductionDAO</code>, <code>IShareDAO</code> to:
  * - Get Top 3 galleries for header<br>
- * - GEt introduction in home page<br>
+ * - Get introduction in home page<br>
  * - Get paging gallery in page with 3 galleries<br>
- * - Get link share<br>
- *
+ * - Get link share for right bar<br>
+ * then forward to <code>index.jsp</code>
+ * 
  * Exception:<br>
  * - If output failed, it will return to error page.
  *
@@ -44,6 +46,9 @@ public class HomeController extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
+     * Get Top 3 galleries for header,get introduction in home page, get paging
+     * gallery in page with 3 galleries, get link share for right bar then
+     * forward to the page <code>index.jsp</code>.
      *
      * @param request it is a object of
      * <code>javax.servlet.http.HttpServletRequest</code>
@@ -75,16 +80,16 @@ public class HomeController extends HttpServlet {
 
             // get Top 3 gallery for header
             ArrayList<Gallery> top3Gallery = galleryDAO.getTopGalleries(3);
-            request.setAttribute("Top3Gallery", top3Gallery);
+            request.setAttribute("top3Gallery", top3Gallery);
 
             // get introduction in home page
             IIntroductionDAO introductionDAO = new IntroductionDAOImpl();
             Introduction intro = introductionDAO.getIntroduction();
-            request.setAttribute("Introduction", intro);
+            request.setAttribute("introduction", intro);
 
             // paging get gallery in page with 3 galleries
             ArrayList<Gallery> galleries = galleryDAO.getGalleries(pageSize, page);
-            request.setAttribute("PagingGallery", galleries);
+            request.setAttribute("pagingGallery", galleries);
             if (!galleries.isEmpty()) {
                 // get number page
                 int numberPage = galleryDAO.getNumberPages(pageSize);
@@ -96,7 +101,7 @@ public class HomeController extends HttpServlet {
             IShareDAO shareDAO = new ShareDAOImpl();
             ArrayList<Share> shareList = shareDAO.getShare();
 
-            request.setAttribute("ShareList", shareList);
+            request.setAttribute("shareList", shareList);
             request.setAttribute("boldHome", "font-bold");
             request.getRequestDispatcher("index.jsp").forward(request, response);
         } catch (Exception e) {
@@ -109,7 +114,8 @@ public class HomeController extends HttpServlet {
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
-     *
+     * Call <code>processRequest</code> method
+     * 
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -123,6 +129,7 @@ public class HomeController extends HttpServlet {
 
     /**
      * Handles the HTTP <code>POST</code> method.
+     * Call <code>processRequest</code> method
      *
      * @param request servlet request
      * @param response servlet response

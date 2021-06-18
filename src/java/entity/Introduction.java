@@ -10,23 +10,23 @@
 package entity;
 
 /**
- *
- * This class represents the Introduction table in database
+ * This class used to contain attributes and methods getter, setter of <code>Introduction</code> object
+ * This class represents the <code>Introduction</code> table in database
  *
  * @author nangnnhe130538
  */
 public class Introduction {
 
     /**
-     * Introduction address
+     * <code>Introduction</code> address
      */
     private String image;
     /**
-     * Introduction description
+     * <code>Introduction</code> description
      */
     private String description;
     /**
-     * Introduction aboutMe
+     * <code>Introduction</code> aboutMe
      */
     private String aboutMe;
 
@@ -50,7 +50,7 @@ public class Introduction {
     }
 
     /**
-     * Get value from image attribute of Introduction class. <br>
+     * Get value from image attribute of <code>Introduction</code> class. <br>
      *
      * @return image it is a <code>java.lang.String</code>
      */
@@ -59,7 +59,7 @@ public class Introduction {
     }
 
     /**
-     * Set value to image attribute of Introduction class
+     * Set value to image attribute of <code>Introduction</code> class
      *
      * @param image it is a <code>java.lang.String</code>
      */
@@ -68,7 +68,7 @@ public class Introduction {
     }
 
     /**
-     * Get value from description attribute of Introduction class. <br>
+     * Get value from description attribute of <code>Introduction</code> class. <br>
      *
      * @return description it is a <code>java.lang.String</code>
      */
@@ -77,7 +77,7 @@ public class Introduction {
     }
 
     /**
-     * Set value to description attribute of Introduction class
+     * Set value to description attribute of <code>Introduction</code> class
      *
      * @param description it is a <code>java.lang.String</code>
      */
@@ -86,7 +86,7 @@ public class Introduction {
     }
 
     /**
-     * Get value from aboutMe attribute of Introduction class. <br>
+     * Get value from aboutMe attribute of <code>Introduction</code> class. <br>
      *
      * @return aboutMe it is a <code>java.lang.String</code>
      */
@@ -95,7 +95,7 @@ public class Introduction {
     }
 
     /**
-     * Set value to aboutMe attribute of Introduction class
+     * Set value to aboutMe attribute of <code>Introduction</code> class
      *
      * @param aboutMe it is a <code>java.lang.String</code>
      */

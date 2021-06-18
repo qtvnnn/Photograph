@@ -10,35 +10,35 @@
 package entity;
 
 /**
- *
- * This class represents the Information table in database
+ * This class used to contain attributes and methods getter, setter of <code>Information</code> object
+ * This class represents the <code>Information</code> table in database
  *
  * @author nangnnhe130538
  */
 public class Information {
 
     /**
-     * Information address
+     * <code>Information</code> address
      */
     private String address;
     /**
-     * Information city
+     * <code>Information</code> city
      */
     private String city;
     /**
-     * Information country
+     * <code>Information</code> country
      */
     private String country;
     /**
-     * Information tel
+     * <code>Information</code> tel
      */
     private String tel;
     /**
-     * Information email
+     * <code>Information</code> email
      */
     private String email;
     /**
-     * Information image
+     * <code>Information</code> image
      */
     private String image;
 
@@ -68,7 +68,7 @@ public class Information {
     }
 
     /**
-     * Get value from address attribute of Information class. <br>
+     * Get value from address attribute of <code>Information</code> class. <br>
      *
      * @return address it is a <code>java.lang.String</code>
      */
@@ -77,7 +77,7 @@ public class Information {
     }
 
     /**
-     * Set value to address attribute of Information class
+     * Set value to address attribute of <code>Information</code> class
      *
      * @param address it is a <code>java.lang.String</code>
      */
@@ -86,7 +86,7 @@ public class Information {
     }
 
     /**
-     * Get value from city attribute of Information class. <br>
+     * Get value from city attribute of <code>Information</code> class. <br>
      *
      * @return city it is a <code>java.lang.String</code>
      */
@@ -95,7 +95,7 @@ public class Information {
     }
 
     /**
-     * Set value to city attribute of Information class
+     * Set value to city attribute of <code>Information</code> class
      *
      * @param city it is a <code>java.lang.String</code>
      */
@@ -104,7 +104,7 @@ public class Information {
     }
 
     /**
-     * Get value from country attribute of Information class. <br>
+     * Get value from country attribute of <code>Information</code> class. <br>
      *
      * @return country it is a <code>java.lang.String</code>
      */
@@ -113,7 +113,7 @@ public class Information {
     }
 
     /**
-     * Set value to country attribute of Information class
+     * Set value to country attribute of <code>Information</code> class
      *
      * @param country it is a <code>java.lang.String</code>
      */
@@ -122,7 +122,7 @@ public class Information {
     }
 
     /**
-     * Get value from tel attribute of Information class. <br>
+     * Get value from tel attribute of <code>Information</code> class. <br>
      *
      * @return tel it is a <code>java.lang.String</code>
      */
@@ -131,7 +131,7 @@ public class Information {
     }
 
     /**
-     * Set value to tel attribute of Information class
+     * Set value to tel attribute of <code>Information</code> class
      *
      * @param tel it is a <code>java.lang.String</code>
      */
@@ -140,7 +140,7 @@ public class Information {
     }
 
     /**
-     * Get value from email attribute of Information class. <br>
+     * Get value from email attribute of <code>Information</code> class. <br>
      *
      * @return email it is a <code>java.lang.String</code>
      */
@@ -149,7 +149,7 @@ public class Information {
     }
 
     /**
-     * Set value to email attribute of Information class
+     * Set value to email attribute of <code>Information</code> class
      *
      * @param email it is a <code>java.lang.String</code>
      */
@@ -158,7 +158,7 @@ public class Information {
     }
 
     /**
-     * Get value from image attribute of Information class. <br>
+     * Get value from image attribute of <code>Information</code> class. <br>
      *
      * @return image it is a <code>java.lang.String</code>
      */
@@ -167,7 +167,7 @@ public class Information {
     }
 
     /**
-     * Set value to image attribute of Information class
+     * Set value to image attribute of <code>Information</code> class
      *
      * @param image it is a <code>java.lang.String</code>
      */

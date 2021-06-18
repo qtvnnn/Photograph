@@ -14,11 +14,11 @@ import db.DBContext;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
- * This class implements from class interface IIntroductionDAO. <br>
- * This class contains method to query select data from the table
- * NumberOfViews.<br>
+ * This class implements functions of the <code>INumberOfViewsDAO</code> interface. <br>
+ * This class contains method to query select data from the table <code>NumberOfViews</code>.<br>
  * There are get view count of page and update view count of page.
  *
  * @author nangnnhe130538
@@ -26,7 +26,7 @@ import java.sql.ResultSet;
 public class NumberOfViewsDaoImpl extends DBContext implements INumberOfViewsDao {
 
     /**
-     * Get number of view from NumberOfViews table in database
+     * Get number of view from <code>NumberOfViews</code> table in database
      *
      * @return number of view
      * @throws java.lang.Exception
@@ -45,7 +45,7 @@ public class NumberOfViewsDaoImpl extends DBContext implements INumberOfViewsDao
             if (rs.next()) {
                 return rs.getInt("NumOfViews");
             }
-        } catch (Exception ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw ex;
         } finally {
             closeResultSet(rs);
@@ -70,7 +70,7 @@ public class NumberOfViewsDaoImpl extends DBContext implements INumberOfViewsDao
             con = getConnection();
             ps = con.prepareStatement(sql);
             ps.execute();
-        } catch (Exception ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw ex;
         } finally {
             closeResultSet(rs);

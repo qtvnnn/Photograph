@@ -1,25 +1,24 @@
-/**
- * Copyright (C) 2021, FPT University
- * J3.L.P0014
- * Maria Bagnarelli's Cafe.
+/*
+ * Copyright (C) 2021, FPT University<br>
+ * J3.L.P0017<br>
+ * Photographer<br>
  *
- * Record of change:
- * DATE         VERSION         Author
- * 2021-02-23   1.0             DungHT
- *
+ * Record of change:<br>
+ * DATE          Version    Author           DESCRIPTION<br>
+ * 2021-05-13    1.0        NangNN           First Version<br>
  */
 package entity;
 
 /**
- *
- * This class represents the NumberOfViews table in Database
+ * This class used to contain attributes and methods getter, setter of <code>NumberOfViews</code> object
+ * This class represents the <code>NumberOfViews</code> table in Database
  *
  * @author nangnnhe130538
  */
 public class NumOfViews {
 
     /**
-     * NumOfViews numberOfviews
+     * <code>NumberOfViews</code> numberOfviews
      */
     private int numberOfviews;
 
@@ -32,25 +31,25 @@ public class NumOfViews {
     /**
      * Constructor
      *
-     * @param numberOfviews
+     * @param numberOfviews it is an <code>int</code>
      */
     public NumOfViews(int numberOfviews) {
         this.numberOfviews = numberOfviews;
     }
 
     /**
-     * Get value from numberOfviews attribute of Share class. <br>
+     * Get value from numberOfviews attribute of <code>NumberOfViews</code> class. <br>
      *
-     * @return numberOfviews it is a <code>java.lang.String</code>
+     * @return numberOfviews it is a <code>int</code>
      */
     public int getNumberOfviews() {
         return numberOfviews;
     }
 
     /**
-     * Set value to numberOfviews attribute of Share class
+     * Set value to numberOfviews attribute of <code>NumberOfViews</code> class
      *
-     * @param numberOfviews it is a <code>java.lang.String</code>
+     * @param numberOfviews it is a <code>int</code>
      */
     public void setNumberOfviews(int numberOfviews) {
         this.numberOfviews = numberOfviews;

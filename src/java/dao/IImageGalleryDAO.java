@@ -13,30 +13,30 @@ import entity.ImageGallery;
 import java.util.ArrayList;
 
 /**
- * This class contains methods to help us manipulate ImageGallery objects in the
- * database.
+ * The interface of <code>ImageGalleryDAOImpl</code> class defines methods to help us 
+ * manipulate <code>ImageGallery</code> object from <code>ImageGallery</code> tables in database.
  *
  * @author nangnnhe130538
  */
 public interface IImageGalleryDAO {
 
     /**
-     * Get all ImageGallery options according in the database and paging
+     * Get all <code>ImageGallery</code> options according in the database and paging
      *
-     * @param id it is an int number.
-     * @param pageSize it is an int number.
-     * @param pageIndex it is an int number.
+     * @param id it is an <code>int</code>.
+     * @param pageSize it is an <code>int</code>.
+     * @param pageIndex it is an <code>int</code>.
      * @return a list <code>ImageGallery</code> object
      * @throws Exception
      */
     public ArrayList<ImageGallery> getImageGalleryPaging(int id, int pageSize, int pageIndex) throws Exception;
 
     /**
-     * Get number of ImageGallery options according in the database
+     * Get number of <code>ImageGallery</code> options according in the database
      *
-     * @param id it is an int number.
-     * @param pageSize it is an int number.
-     * @return an int number.
+     * @param id it is an <code>int</code>.
+     * @param pageSize it is an <code>int</code>.
+     * @return an <code>int</code>.
      * @throws Exception
      */
     public int getNumberPages(int id, int pageSize) throws Exception;

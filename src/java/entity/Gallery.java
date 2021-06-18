@@ -10,27 +10,27 @@
 package entity;
 
 /**
- *
- * This class represents the Gallery table in database
+ * This class used to contain attributes and methods getter, setter of <code>Gallery</code> object
+ * This class represents the <code>Gallery</code> table in database
  *
  * @author nangnnhe130538
  */
 public class Gallery {
 
     /**
-     * Gallery id
+     * <code>Gallery</code> id
      */
     private int id;
     /**
-     * Gallery name
+     * <code>Gallery</code> name
      */
     private String name;
     /**
-     * Gallery description
+     * <code>Gallery</code> description
      */
     private String description;
     /**
-     * Gallery image
+     * <code>Gallery</code> image
      */
     private String image;
 
@@ -43,7 +43,7 @@ public class Gallery {
     /**
      * Constructor
      *
-     * @param id it is an int
+     * @param id it is an <code>int</code>
      * @param name it is a <code>java.lang.String</code>
      * @param description it is a <code>java.lang.String</code>
      * @param image it is a <code>java.lang.String</code>
@@ -56,25 +56,25 @@ public class Gallery {
     }
 
     /**
-     * Get value form id attribute of Gallery class. <br>
+     * Get value form id attribute of <code>Gallery</code> class. <br>
      *
-     * @return id it is an int
+     * @return id it is an <code>int</code>
      */
     public int getId() {
         return id;
     }
 
     /**
-     * Set value to id attribute of Gallery class
+     * Set value to id attribute of <code>Gallery</code> class
      *
-     * @param id it is an int
+     * @param id it is an <code>int</code>
      */
     public void setId(int id) {
         this.id = id;
     }
 
     /**
-     * Get value from name attribute of Gallery class. <br>
+     * Get value from name attribute of <code>Gallery</code> class. <br>
      *
      * @return name it is a <code>java.lang.String</code>
      */
@@ -83,7 +83,7 @@ public class Gallery {
     }
 
     /**
-     * Set value to name attribute of Gallery class
+     * Set value to name attribute of <code>Gallery</code> class
      *
      * @param name it is a <code>java.lang.String</code>
      */
@@ -92,7 +92,7 @@ public class Gallery {
     }
 
     /**
-     * Get value from description attribute of Gallery class. <br>
+     * Get value from description attribute of <code>Gallery</code> class. <br>
      *
      * @return description it is a <code>java.lang.String</code>
      */
@@ -101,7 +101,7 @@ public class Gallery {
     }
 
     /**
-     * Set value to description attribute of Gallery class
+     * Set value to description attribute of <code>Gallery</code> class
      *
      * @param description it is a <code>java.lang.String</code>
      */
@@ -110,7 +110,7 @@ public class Gallery {
     }
 
     /**
-     * Get value from image attribute of Gallery class. <br>
+     * Get value from image attribute of <code>Gallery</code> class. <br>
      *
      * @return image it is a <code>java.lang.String</code>
      */
@@ -119,7 +119,7 @@ public class Gallery {
     }
 
     /**
-     * Set value to image attribute of Gallery class
+     * Set value to image attribute of <code>Gallery</code> class
      *
      * @param image it is a <code>java.lang.String</code>
      */

@@ -18,8 +18,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 /**
- * This class implements from class interface IShareDAO. <br>
- * This class contains method to query select data from the table Share.<br>
+ * This class implements functions of the <code>IShareDAO</code> interface. <br>
+ * This class contains method to query select data from the table <code>Share</code>.<br>
  * There are get all Share.
  *
  * @author nangnnhe130538
@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class ShareDAOImpl extends DBContext implements IShareDAO {
 
     /**
-     * Get all Share options according in the database.
+     * Get all <code>Share</code> options according in the database.
 
      * @return a list <code>Share</code> object
      * @throws Exception

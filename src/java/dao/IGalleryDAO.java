@@ -13,45 +13,45 @@ import entity.Gallery;
 import java.util.ArrayList;
 
 /**
- * This class contains methods to help us manipulate Gallery objects in the
- * database.
- *
+ * The interface of <code>GalleryDAOImpl</code> class defines methods to help us 
+ * manipulate <code>Gallery</code> object from <code>Gallery</code> tables in database.
+ * 
  * @author nangnnhe130538
  */
 public interface IGalleryDAO {
 
     /**
-     * Get top 3 Galleries options according in the database
+     * Get top 3 <code>Galleries</code> options according in the database
      *
-     * @param top it is an int
+     * @param top it is an <code>int</code>
      * @return a list <code>Gallery</code> object
      * @throws Exception
      */
     public ArrayList<Gallery> getTopGalleries(int top) throws Exception;
 
     /**
-     * Get all Galleries options according in the database and paging
+     * Get all <code>Galleries</code> options according in the database and paging
      *
-     * @param pageSize. It is an int number.
-     * @param pageIndex. It is an int number.
+     * @param pageSize. It is an <code>int</code>.
+     * @param pageIndex. It is an <code>int</code>.
      * @return a list <code>Gallery</code> object
      * @throws Exception
      */
     public ArrayList<Gallery> getGalleries(int pageSize, int pageIndex) throws Exception;
 
     /**
-     * Get number of Galleries options according in the database
+     * Get number of <code>Galleries</code> options according in the database
      *
-     * @param pageSize. It is an int number.
-     * @return an int number.
+     * @param pageSize. It is an <code>int</code>.
+     * @return an <code>int</code>.
      * @throws Exception
      */
     public int getNumberPages(int pageSize) throws Exception;
 
     /**
-     * Get a Gallery option according in the database by Gallery id
+     * Get a <code>Galleries</code> option according in the database by Gallery id
      *
-     * @param id. It is an int number.
+     * @param id. It is an <code>int</code>.
      * @return a <code>Gallery</code> object
      * @throws Exception
      */

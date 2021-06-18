@@ -12,15 +12,15 @@ package dao;
 import entity.Information;
 
 /**
- * This class contains methods to help us manipulate Infomation objects in the
- * database.
+ * The interface of <code>InfomationDAOImpl</code> class defines methods to help us 
+ * manipulate <code>Infomation</code> object from <code>Infomation</code> tables in database.
  *
  * @author nangnnhe130538
  */
 public interface IInfomationDAO {
 
     /**
-     * Get all Information options according in the database.
+     * Get all <code>Infomation</code> options according in the database.
      *
      * @return a list <code>Information</code> object
      * @throws Exception

@@ -17,9 +17,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 /**
- * This class implements from class interface IIntroductionDAO. <br>
- * This class contains method to query select data from the table
- * Introduction.<br>
+ * This class implements functions of the <code>IIntroductionDAO</code> interface. <br>
+ * This class contains method to query select data from the table <code>Introduction</code>.<br>
  * There are get all Introduction.
  *
  * @author nangnnhe130538
@@ -27,7 +26,7 @@ import java.sql.ResultSet;
 public class IntroductionDAOImpl extends DBContext implements IIntroductionDAO {
 
     /**
-     * Get all Introduction options according in the database.
+     * Get all <code>Introduction</code> options according in the database.
      *
      * @returna list <code>Introduction</code> object
      * @throws Exception

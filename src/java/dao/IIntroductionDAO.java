@@ -12,15 +12,15 @@ package dao;
 import entity.Introduction;
 
 /**
- * This class contains methods to help us manipulate Introduction objects in the
- * database.
+ * The interface of <code>IntroductionDAOImpl</code> class defines methods to help us 
+ * manipulate <code>Introduction</code> object from <code>Introduction</code> tables in database.
  *
  * @author nangnnhe130538
  */
 public interface IIntroductionDAO {
 
     /**
-     * Get all Introduction options according in the database.
+     * Get all <code>Introduction</code> options according in the database.
      *
      * @return a list <code>Introduction</code> object
      * @throws Exception

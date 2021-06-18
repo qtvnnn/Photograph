@@ -10,23 +10,23 @@
 package entity;
 
 /**
- *
- * This class represents the Share table in database
+ * This class used to contain attributes and methods getter, setter of <code>Share</code> object
+ * This class represents the <code>Share</code> table in database
  *
  * @author nangnnhe130538
  */
 public class Share {
 
     /**
-     * Share icon
+     * <code>Share</code> icon
      */
     private String icon;
     /**
-     * Share socialNetwork
+     * <code>Share</code> socialNetwork
      */
     private String socialNetwork;
     /**
-     * Share url
+     * <code>Share</code> url
      */
     private String url;
 
@@ -50,7 +50,7 @@ public class Share {
     }
 
     /**
-     * Get value from icon attribute of Share class. <br>
+     * Get value from icon attribute of <code>Share</code> class. <br>
      *
      * @return icon it is a <code>java.lang.String</code>
      */
@@ -59,7 +59,7 @@ public class Share {
     }
 
     /**
-     * Set value to icon attribute of Share class
+     * Set value to icon attribute of <code>Share</code> class
      *
      * @param icon it is a <code>java.lang.String</code>
      */
@@ -68,7 +68,7 @@ public class Share {
     }
 
     /**
-     * Get value from socialNetwork attribute of Share class. <br>
+     * Get value from socialNetwork attribute of <code>Share</code> class. <br>
      *
      * @return socialNetwork it is a <code>java.lang.String</code>
      */
@@ -77,7 +77,7 @@ public class Share {
     }
 
     /**
-     * Set value to socialNetwork attribute of Share class
+     * Set value to socialNetwork attribute of <code>Share</code> class
      *
      * @param socialNetwork it is a <code>java.lang.String</code>
      */
@@ -86,7 +86,7 @@ public class Share {
     }
 
     /**
-     * Get value from url attribute of Share class. <br>
+     * Get value from url attribute of <code>Share</code> class. <br>
      *
      * @return url it is a <code>java.lang.String</code>
      */
@@ -95,7 +95,7 @@ public class Share {
     }
 
     /**
-     * Set value to url attribute of Share class
+     * Set value to url attribute of <code>Share</code> class
      *
      * @param url it is a <code>java.lang.String</code>
      */

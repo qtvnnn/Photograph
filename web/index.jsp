@@ -20,12 +20,12 @@
                 <div class="main-body-content-left">
                     <!--intro image, description-->
                     <div class="intro">
-                        <div class="intro-image"><img src="${Introduction.image}"/></div>
-                        <div class="intro-descript">${Introduction.description}</div>
+                        <div class="intro-image"><img src="${introduction.image}"/></div>
+                        <div class="intro-descript">${introduction.description}</div>
                     </div>
                     <!--link view gallery-->
                     <div class="view-gallery">
-                        <c:forEach var="g" items="${PagingGallery}" >
+                        <c:forEach var="g" items="${pagingGallery}" >
                              <div class="a-gallery">
                                 <div class="a-gallery-image">
                                     <img  src="${g.image}" alt="" >
@@ -59,7 +59,7 @@
                     <div class="about-me">
                         <div class="about-me-title">About me</div>
                         <p class="about-me-content">
-                            ${Introduction.aboutMe}
+                            ${introduction.aboutMe}
                         </p>
                     </div>
                         

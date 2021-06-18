@@ -17,9 +17,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 /**
- * This class implements from class interface IInfomationDAO. <br>
- * This class contains method to query select data from the table
- * Information.<br>
+ * This class implements functions of the <code>IInformationDAO</code> interface. <br>
+ * This class contains method to query select data from the table <code>Information</code>.<br>
  * There are get all Information.
  *
  * @author nangnnhe130538
@@ -27,7 +26,7 @@ import java.sql.ResultSet;
 public class InformationDAOImpl extends DBContext implements IInfomationDAO {
 
     /**
-     * Get all Information options according in the database.
+     * Get all <code>Information</code> options according in the database.
      *
      * @returna list <code>Information</code> object
      * @throws Exception

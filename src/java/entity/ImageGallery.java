@@ -10,19 +10,19 @@
 package entity;
 
 /**
- *
- * This class represents the ImageGallery table in database
+ * This class used to contain attributes and methods getter, setter of <code>ImageGallery</code> object
+ * This class represents the <code>ImageGallery</code> table in database
  *
  * @author nangnnhe130538
  */
 public class ImageGallery {
 
     /**
-     * ImageGallery image
+     * <code>ImageGallery</code> image
      */
     private String image;
     /**
-     * ImageGallery galleryId
+     * <code>ImageGallery</code> galleryId
      */
     private int galleryId;
 
@@ -36,7 +36,7 @@ public class ImageGallery {
      * Constructor
      *
      * @param image it is a <code>java.lang.String</code>
-     * @param galleryId it is an int
+     * @param galleryId it is an <code>int</code>
      */
     public ImageGallery(String image, int galleryId) {
         this.image = image;
@@ -44,7 +44,7 @@ public class ImageGallery {
     }
 
     /**
-     * Get value from image attribute of ImageGallery class. <br>
+     * Get value from image attribute of <code>ImageGallery</code> class. <br>
      *
      * @return image it is a <code>java.lang.String</code>
      */
@@ -53,7 +53,7 @@ public class ImageGallery {
     }
 
     /**
-     * Set value to image attribute of ImageGallery class
+     * Set value to image attribute of <code>ImageGallery</code> class
      *
      * @param image it is a <code>java.lang.String</code>
      */
@@ -62,18 +62,18 @@ public class ImageGallery {
     }
 
     /**
-     * Get value from getGalleryId attribute of ImageGallery class. <br>
+     * Get value from getGalleryId attribute of <code>ImageGallery</code> class. <br>
      *
-     * @return getGalleryId. It is an int
+     * @return getGalleryId. It is an <code>int</code>
      */
     public int getGalleryId() {
         return galleryId;
     }
 
     /**
-     * Set value to galleryId attribute of ImageGallery class
+     * Set value to galleryId attribute of <code>ImageGallery</code> class
      *
-     * @param galleryId it is an int
+     * @param galleryId it is an <code>int</code>
      */
     public void setGalleryId(int galleryId) {
         this.galleryId = galleryId;

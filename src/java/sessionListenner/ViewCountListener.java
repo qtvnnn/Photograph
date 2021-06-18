@@ -24,7 +24,7 @@ import javax.servlet.http.HttpSessionListener;
 public class ViewCountListener implements HttpSessionListener {
 
     /**
-     *Update and Get count number of view page from table NumberOfViews in database when begin access to web site
+     *Update and Get count number of view page from table <code>NumberOfViews</code> in database when begin access to web site
      *
      * @param se it is a <code>javax.servlet.http.HttpSessionEvent</code>
      */

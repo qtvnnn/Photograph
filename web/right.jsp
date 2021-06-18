@@ -18,7 +18,7 @@
                 <p>Share this page</p>
             </div>
             <div class="list-social-network">
-                <c:forEach var="s" items="${ShareList}" >
+                <c:forEach var="s" items="${shareList}" >
                     <div class="social-network-link">
                         <img src="${s.icon}" alt=""/>
                         <a href="${s.url}">Share on ${s.socialNetwork}</a>

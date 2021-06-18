@@ -18,8 +18,10 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 /**
- * This class implements from class interface IGalleryDAO. <br>
- * This class contains method to query select data from the table Gallery.<br>
+ * This class implements functions of the <code>IGalleryDAO</code> interface.
+ * <br>
+ * This class contains method to query select data from the table
+ * <code>Gallery</code>.<br>
  * There are get Top 3 Galleries, Get all Galleries, get number Galleries, get
  * Gallery By ID.
  *
@@ -28,8 +30,9 @@ import java.util.ArrayList;
 public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
 
     /**
-     * Get top 3 Galleries options according in the database
+     * Get top 3 <code>Galleries</code> options according in the database
      *
+     * @param top it is an <code>int</code>
      * @return a list <code>Gallery</code> object
      * @throws Exception
      */
@@ -65,10 +68,10 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
     }
 
     /**
-     * Get all Galleries options according in the database and paging
+     * Get all <code>Galleries</code> options according in the database and paging
      *
-     * @param pageSize it is an int number.
-     * @param pageIndex it is an int number.
+     * @param pageSize. It is an <code>int</code>.
+     * @param pageIndex. It is an <code>int</code>.
      * @return a list <code>Gallery</code> object
      * @throws Exception
      */
@@ -111,12 +114,13 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
     }
 
     /**
-     * Get number of Galleries options according in the database
+     * Get number of <code>Galleries</code> options according in the database
      *
-     * @param pageSize it is an int number.
-     * @return an int number.
+     * @param pageSize. It is an <code>int</code>.
+     * @return an <code>int</code>.
      * @throws Exception
      */
+    @Override
     public int getNumberPages(int pageSize) throws Exception {
         Connection conn = null;
         PreparedStatement statement = null;
@@ -147,12 +151,13 @@ public class GalleryDAOImpl extends DBContext implements IGalleryDAO {
     }
 
     /**
-     * Get a Gallery option according in the database by Gallery id
+     * Get a <code>Galleries</code> option according in the database by Gallery id
      *
-     * @param id it is an int number.
+     * @param id. It is an <code>int</code>.
      * @return a <code>Gallery</code> object
      * @throws Exception
      */
+    @Override    
     public Gallery getGalleryByID(int id) throws Exception {
         Connection conn = null;
         PreparedStatement statement = null;

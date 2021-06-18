@@ -29,11 +29,13 @@ import java.util.logging.Logger;
 
 /**
  * Process:<br>
+ * This class used functions in <code>IGalleryDAO</code>, <code>IImageGalleryDAO</code>, <code>IShareDAO</code> to:
  * - Get Top 3 galleries for header<br>
  * - Get image gallery to paging<br>
  * - Get big image<br>
- * - Get link share
- *
+ * - Get link share for right bar<br>
+ * then forward to <code>galleryDetail.jsp</code>
+ * 
  * Exception:<br>
  * - If output failed, it will return to error page.
  *
@@ -44,6 +46,9 @@ public class GalleryDetailController extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
+     * Get Top 3 galleries for header, get introduction in home page, get paging 
+     * gallery in page with 3 galleries, get link share for right bar then
+     * forward to the page <code>galleryDetail.jsp</code>.
      *
      * @param request it is a object of
      * <code>javax.servlet.http.HttpServletRequest</code>
@@ -79,7 +84,7 @@ public class GalleryDetailController extends HttpServlet {
 
             // get Top 3 gallery for header
             ArrayList<Gallery> top3Galleries = galleryDAO.getTopGalleries(3);
-            request.setAttribute("Top3Gallery", top3Galleries);
+            request.setAttribute("top3Gallery", top3Galleries);
 
             // big image
             request.setAttribute("galleryCurrent", galleryDAO.getGalleryByID(id));
@@ -99,7 +104,7 @@ public class GalleryDetailController extends HttpServlet {
             // get link share
             IShareDAO shareDAO = new ShareDAOImpl();
             ArrayList<Share> shareList = shareDAO.getShare();
-            request.setAttribute("ShareList", shareList);
+            request.setAttribute("shareList", shareList);
 
             request.getRequestDispatcher("galleryDetail.jsp").forward(request, response);
         } catch (Exception e) {
@@ -111,7 +116,8 @@ public class GalleryDetailController extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
-     * Handles the HTTP <code>GET</code> method.
+     * Handles the HTTP <code>POST</code> method.
+     * Call <code>processRequest</code> method
      *
      * @param request servlet request
      * @param response servlet response
@@ -126,6 +132,7 @@ public class GalleryDetailController extends HttpServlet {
 
     /**
      * Handles the HTTP <code>POST</code> method.
+     * Call <code>processRequest</code> method
      *
      * @param request servlet request
      * @param response servlet response

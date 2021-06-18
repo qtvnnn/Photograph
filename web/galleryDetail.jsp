@@ -74,7 +74,7 @@
                                 </c:if>
                                 <!--other pages:If clicked, it will move to a new page-->
                                 <c:if test="${i != page}">
-                                    <a href="GalleryDetail?page=${i}&id=${galleryCurrent.id}" >${i}</a>
+                                    <a href="galleryDetail?page=${i}&id=${galleryCurrent.id}" >${i}</a>
                                 </c:if>
                             </c:forEach>
                         </div>
